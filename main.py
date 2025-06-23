@@ -52,7 +52,6 @@ def test_app():
 @app.get("/retrive", dependencies=[Depends(validate_api_key)])
 def retrive():
     
-    # path = './data/actionplan - whole.txt'
-    path = './data/tes.json'
+    path = './data/actionplan - whole.txt'
     status = fetch_file( path )
     return status
