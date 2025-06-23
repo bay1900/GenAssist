@@ -6,47 +6,56 @@ from src.utils import token_counter
 
 
 async def chunk_actionplan( text ):
-    summary = { 
-        "topic" : { 
-            "act_plan_count": "",
-            "act_plan_list": [],
-            "distinct_count": "",
-            "distinct_list": []
-        },
-        "gene" : {
-            "act_plan_count": "",
-            "act_plan_list": [],
-            "distinct_count": "",
-            "distinct_list": []
-        }
+    payload = { 
+                "status": False,
+                "data": "",
+                "error": "",
+                "topic" : { 
+                    "act_plan_count": "",
+                    "act_plan_list": [],
+                    "distinct_count": "",
+                    "distinct_list": []
+                },
+                "gene" : {
+                    "act_plan_count": "",
+                    "act_plan_list": [],
+                    "distinct_count": "",
+                    "distinct_list": []
+                }
     }
 
     async def topic_chuncker(text):
+        try:
+            topic_arr = []
+            display   = [] 
+            pattern = r"Topic:\s*(.*?)\n(.*?)(?=\nTopic:|\Z)"
 
-        topic_arr = []
-        display   = [] 
-        pattern = r"Topic:\s*(.*?)\n(.*?)(?=\nTopic:|\Z)"
+            topic_match = re.findall(pattern, text, re.DOTALL)
 
-        topic_match = re.findall(pattern, text, re.DOTALL)
-        
-        for topic, context in topic_match:
+            for topic, context in topic_match:
 
-            temp_topic = { 
-                            "topic": topic.strip(),
-                            "content": context.strip()
-                         }
-            display.append(temp_topic["topic"])
-            topic_arr.append(temp_topic)
-        
-        distinct_set = set(display)
-        
-        
-        # SUMARY
-        summary["topic"]["act_plan_count"] = len(topic_arr)
-        summary["topic"]["act_plan_list"]  = display
-        summary["topic"]["distinct_count"] = len(distinct_set)
-        summary["topic"]["distinct"]       = list(distinct_set)
-        print ( len( topic_match ), " topics found")
+                temp_topic = { 
+                    "topic": topic.strip(),
+                    "content": context.strip()
+                }
+                display.append(temp_topic["topic"])
+                topic_arr.append(temp_topic)
+
+                distinct_set = set(display)
+
+            payload["topic"]["act_plan_count"] = len(topic_arr)
+            payload["topic"]["act_plan_list"]  = display
+            payload["topic"]["distinct_count"] = len(distinct_set)
+            payload["topic"]["distinct"]       = list(distinct_set)
+            print ( len( topic_match ), " topics found")
+
+        except re.error as e:
+            payload["error"] = e
+            return payload
+        except Exception as e: 
+            payload["error"] = e
+            return payload
+
         return topic_arr
 
     async def gene_chunker(): 
@@ -72,10 +81,10 @@ async def chunk_actionplan( text ):
         distinct_set = set(display)
         
         # SUMARY
-        summary["gene"]["act_plan_count"] = len(gene_arr)
-        summary["gene"]["act_plan_list"] = display
-        summary["gene"]["distinct_count"] = len(distinct_set)
-        summary["gene"]["distinct_list"] = list(distinct_set)
+        payload["gene"]["act_plan_count"] = len(gene_arr)
+        payload["gene"]["act_plan_list"] = display
+        payload["gene"]["distinct_count"] = len(distinct_set)
+        payload["gene"]["distinct_list"] = list(distinct_set)
         print(len(distinct_set), " genes found" )
         return gene_arr
 
