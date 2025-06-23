@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 from fastapi.security import APIKeyHeader
 
-from retriever import fetch_file
+from retriever import knowledge_base
 
 load_dotenv()
 
@@ -50,8 +50,7 @@ def test_app():
     return {"message": "genAssist is running successfully!"}    
 
 @app.get("/retrive", dependencies=[Depends(validate_api_key)])
-def retrive():
+async def retrive():
     
-    path = './data/actionplan - whole.txt'
-    status = fetch_file( path )
+    status = await knowledge_base()
     return status

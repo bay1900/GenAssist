@@ -1,11 +1,22 @@
-
-def read(file_path):
+import os
+async def read(file_path):
     
     payload = { 
            "status": False,
            "data": "",
            "error": ""}
     try:
+        # Check if the file exists and is not empty before attempting to read
+        if not os.path.exists(file_path):
+            payload["error"] = f"File not found: {file_path}"
+            print(f"Error: File not found: {file_path}")
+            return payload
+        
+        if os.path.getsize(file_path) == 0:
+            payload["error"] = f"File is empty: {file_path}"
+            print(f"File is empty: {file_path}")
+            return payload
+        
         with open(file_path, 'r', encoding='utf-8') as file:
             data = file.read()
             
