@@ -33,5 +33,5 @@ async def knowledge_base():
     
     chunks = await chunker.chunk_actionplan ( data["data"] )
     
-    
+    return chunks
     
