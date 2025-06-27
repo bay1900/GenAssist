@@ -2,11 +2,36 @@ import os
 
 from fastapi import FastAPI, Depends, HTTPException, status, Request
 from fastapi.middleware.cors import CORSMiddleware
-from dotenv import load_dotenv
-
 from fastapi.security import APIKeyHeader
 
+from model import param
+from dotenv import load_dotenv
 from retriever import knowledge_base
+
+from pydantic import BaseModel, ValidationError
+
+
+class Model(BaseModel):
+    list_of_ints: list[int]
+    a_float: float
+
+
+data = dict(
+    list_of_ints=['1', 2, 'bad'],
+    a_float='not a float',
+)
+
+try:
+    Model(**data)
+except ValidationError as e:
+    print(e)
+    """
+    2 validation errors for Model
+    list_of_ints.2
+      Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='bad', input_type=str]
+    a_float
+      Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='not a float', input_type=str]
+    """
 
 load_dotenv()
 
@@ -49,8 +74,10 @@ def test_app():
     """
     return {"message": "genAssist is running successfully!"}    
 
-@app.get("/retrive", dependencies=[Depends(validate_api_key)])
-async def retrive():
+@app.post("/embed_knowledgebase", dependencies=[Depends(validate_api_key)])
+async def retrive( payload: param.Embed_knowledgebase_input):
+    
+    embedding = payload.embedding
     
     status = await knowledge_base()
     return status
