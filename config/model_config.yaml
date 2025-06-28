@@ -1,3 +1,38 @@
 openai:
-  vector: "/vector"
-  model: "test model"
+  id: 1
+  name:   "Chat GPT"
+  api:    "OPENAI_KEY"
+  vector: ""
+  model:  "gpt-4.1-mini"
+  model_list:
+    - model1
+    - model2
+  desc:   ""
+mistral:
+  id: 1
+  name:   "Mistral"
+  api:    "MISTRAL_KEY"
+  vector: ""
+  model:  "magistral-small-2506"
+  desc:   ""
+deepseek:
+  id: 1
+  name:   "Deepseek"
+  api:    "DEEPSEEK_KEY"
+  vector: ""
+  model:  "deepseek-chat"
+  desc:   ""
+gemini:
+  id: 1
+  name:   "Gemini"
+  api:    "GEMINI_KEY"
+  vector: ""
+  model:  "gemini-2.0-flash"
+  desc:   ""
+claude:
+  id: 1
+  name:   "Claude"
+  api:    "CLAUDE_KEY"
+  vector: ""
+  model:  "claude-sonnet-4-20250514"
+  desc:   ""

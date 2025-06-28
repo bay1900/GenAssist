@@ -72,7 +72,7 @@ async def validate_api_key(api_key: str = Depends(api_key_header)):
 def model_config():
     
     data = yaml.read ( "./config/model_config.yaml")
-    
+    print ( data )
     return data   
 
 @app.post("/embed_knowledgebase", dependencies=[Depends(validate_api_key)])
