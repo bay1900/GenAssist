@@ -1,0 +1,3 @@
+openai:
+  vector: "/vector"
+  model: "test model"

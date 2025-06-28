@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import APIKeyHeader
 
 from model import param
+from src.utils import yaml
 from dotenv import load_dotenv
 from retriever import knowledge_base
 
@@ -67,17 +68,17 @@ async def validate_api_key(api_key: str = Depends(api_key_header)):
         )
     return api_key
 
-@app.get("/test_app", dependencies=[Depends(validate_api_key)])
-def test_app():
-    """
-    Test endpoint to check if the application is running.
-    """
-    return {"message": "genAssist is running successfully!"}    
+@app.get("/model_config", dependencies=[Depends(validate_api_key)])
+def model_config():
+    
+    data = yaml.read ( "./config/model_config.yaml")
+    
+    return data   
 
 @app.post("/embed_knowledgebase", dependencies=[Depends(validate_api_key)])
 async def retrive( payload: param.Embed_knowledgebase_input):
     
-    embedding = payload.embedding
+    is_embedding = payload.is_embedding
     
-    status = await knowledge_base()
+    status = await knowledge_base(is_embedding)
     return status

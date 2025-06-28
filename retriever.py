@@ -24,14 +24,17 @@ async def fetch_file(path):
     else:
         return data
     
-async def knowledge_base():
+async def knowledge_base( is_embedding ):
     
     path = './data/actionplan - whole.txt'
     data = await file.read( path )
     status = data["status"]
     if not status: return data 
     
-    chunks = await chunker.chunk_actionplan ( data["data"] )
+    if is_embedding: 
+        print ( "embed function here " )
+    else: 
+        chunks = await chunker.chunk_actionplan ( data["data"] )
     
     return chunks
     
