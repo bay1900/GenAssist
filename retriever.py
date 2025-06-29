@@ -3,7 +3,7 @@ import re
 import uuid
 import tiktoken
 
-from src.utils import file
+from src.utils import file, embedding
 from src.chunk import chunker
 
 
@@ -32,9 +32,10 @@ async def knowledge_base( is_embedding ):
     if not status: return data 
     
     if is_embedding: 
+        embedding.embed()
         print ( "embed function here " )
     else: 
         chunks = await chunker.chunk_actionplan ( data["data"] )
     
-    return chunks
+    return "chunks"
     

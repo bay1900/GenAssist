@@ -9,28 +9,28 @@ openai:
     - model2
   desc:   ""
 mistral:
-  id: 1
+  id: 2
   name:   "Mistral"
   api:    "MISTRAL_KEY"
   vector: ""
   model:  "magistral-small-2506"
   desc:   ""
 deepseek:
-  id: 1
+  id: 3
   name:   "Deepseek"
   api:    "DEEPSEEK_KEY"
   vector: ""
   model:  "deepseek-chat"
   desc:   ""
 gemini:
-  id: 1
+  id: 4
   name:   "Gemini"
   api:    "GEMINI_KEY"
   vector: ""
   model:  "gemini-2.0-flash"
   desc:   ""
 claude:
-  id: 1
+  id: 5
   name:   "Claude"
   api:    "CLAUDE_KEY"
   vector: ""
