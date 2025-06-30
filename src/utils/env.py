@@ -1,5 +1,8 @@
 import os 
+from dotenv import load_dotenv
 
-def read ( key ):
+
+async def read ( key ):
+    load_dotenv()
     data = os.getenv( key )
     return str( data )

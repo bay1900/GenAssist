@@ -1,7 +1,7 @@
 import yaml
 import os
 
-def read ( file_path ): 
+async def read ( file_path ): 
     with open( file_path, 'r') as file:
         data = yaml.safe_load( file )
 

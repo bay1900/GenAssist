@@ -93,19 +93,19 @@ async def write_json(file_path, data_to_write):
            "data": "",
            "error": ""}
     try:
-        file_exist = os.path.exists(file_path)
-        file_size  = os.path.getsize(file_path) == 0
+        # file_exist = os.path.exists(file_path)
+        # file_size  = os.path.getsize(file_path) == 0
         
         # WRITE WHEN IF FILE IS NOT EXIST OR EMPTY
         # This prevents overwriting existing data unless the file is empty
-        if not file_exist or file_size:
+        # if not file_exist or file_size:
         
-         with open(file_path, 'w') as file:
+        with open(file_path, 'w') as file:
             json.dump(data_to_write, file, indent=4)
-                
+
             payload["status"] = True
             payload["data"]   = data_to_write
-            
+
             print(f"File write successfully: {file_path}")
             return payload
 

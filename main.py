@@ -81,4 +81,4 @@ async def retrive( payload: param.Embed_knowledgebase_input):
     is_embedding = payload.is_embedding
     
     status = await knowledge_base(is_embedding)
-    return status
+    return status 

@@ -3,7 +3,7 @@ import re
 import uuid
 import tiktoken
 
-from src.utils import file, embedding
+from src.utils import file, embedding, env, yaml
 from src.chunk import chunker
 
 
@@ -26,18 +26,27 @@ async def fetch_file(path):
     
 async def knowledge_base( is_embedding ):
     
-    path = './data/actionplan - whole.txt'
-    data = await file.read( path )
+    # CONFIG
+    config = await yaml.read( "./config/file_path_config.yaml" )
+    actionplan_config = config["data"]["actionplan"]
+    
+    # ACTIONPLAN TEXT READ
+    actionplan_text_path = actionplan_config["actionplan_text_path"]
+    data = await file.read( actionplan_text_path )
     status = data["status"]
     if not status: return data 
     
+    # CHUNKING JSON
     chunks = await chunker.chunk_actionplan ( data["data"] )
     
-    if is_embedding: 
-        embedding.embed()
-        print ( "embed function here " )
-    else: 
-        chunks = await chunker.chunk_actionplan ( data["data"] )
+    actionpan_json_path = actionplan_config["actionplan_json_path"]
+    await file.write_json( actionpan_json_path, chunks["data"] )
+     
+    # if is_embedding:  
+    #     embedding.embed()
+    #     print ( "embed function here " )
+    # else: 
+    #     chunks = await chunker.chunk_actionplan ( data["data"] )
     
     return "chunks"
     
