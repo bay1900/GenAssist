@@ -31,6 +31,8 @@ async def knowledge_base( is_embedding ):
     status = data["status"]
     if not status: return data 
     
+    chunks = await chunker.chunk_actionplan ( data["data"] )
+    
     if is_embedding: 
         embedding.embed()
         print ( "embed function here " )
