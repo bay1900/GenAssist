@@ -1,0 +1,21 @@
+[2025-06-30] 16:49:20 -  ERROR  - write_json - file.py - 119 - Error while writing ./data/actionplan/actionplan.json: [Errno 2] No such file or directory: './data/actionplan/actionplan.json'
+[2025-06-30] 16:49:37 -  ERROR  - write_json - file.py - 119 - Error ss while writing ./data/actionplan/actionplan.json: [Errno 2] No such file or directory: './data/actionplan/actionplan.json'
+[2025-06-30] 16:53:49 -  DEBUG  - setup_logging - logger.py - 14  - Logging configured successfully.
+[2025-06-30] 16:53:58 -  DEBUG  - setup_logging - logger.py - 14  - Logging configured successfully.
+[2025-06-30] 16:53:58 -  DEBUG  - setup_logging - logger.py - 14  - Logging configured successfully.
+[2025-06-30] 16:54:05 -  DEBUG  - setup_logging - logger.py - 14  - Logging configured successfully.
+[2025-06-30] 16:54:21 -  DEBUG  - setup_logging - logger.py - 14  - Logging configured successfully.
+[2025-06-30] 16:54:36 -  DEBUG  - setup_logging - logger.py - 14  - Logging configured successfully.
+[2025-06-30] 16:54:39 -  DEBUG  - setup_logging - logger.py - 14  - Logging configured successfully.
+[2025-06-30] 16:54:42 -  ERROR  - write_json - file.py - 122 - Error ss while writing ./data/actionplan/actionplan.json: [Errno 2] No such file or directory: './data/actionplan/actionplan.json'
+[2025-06-30] 16:57:29 -  DEBUG  - setup_logging - logger.py - 14  - Logging configured successfully.
+[2025-06-30] 16:57:41 -  ERROR  - write_json - file.py - 122 - Error ss while writing ./data/actionplan/actionplan.json: [Errno 2] No such file or directory: './data/actionplan/actionplan.json'
+[2025-06-30] 16:57:49 -  ERROR  - write_json - file.py - 122 - Error ss while writing ./data/actionplan/actionplan.json: [Errno 2] No such file or directory: './data/actionplan/actionplan.json'
+[2025-06-30] 16:58:30 -  INFO   - <module> - file.py - 16  - This is an info log
+[2025-06-30] 16:58:56 -  INFO   - <module> - file.py - 16  - This is an info log
+[2025-06-30] 16:59:04 -  INFO   - <module> - file.py - 16  - This is an info log
+[2025-06-30] 17:01:54 -  DEBUG  - setup_logging - logger.py - 14  - Logging configured successfully.
+[2025-06-30] 17:01:58 -  DEBUG  - setup_logging - logger.py - 14  - Logging configured successfully.
+[2025-06-30] 17:02:14 -  DEBUG  - setup_logging - logger.py - 14  - Logging configured successfully.
+[2025-06-30] 17:02:15 -  ERROR  - write_json - file.py - 123 - Error ss while writing ./data/actionplan/actionplan.json: [Errno 2] No such file or directory: './data/actionplan/actionplan.json'
+[2025-06-30] 17:07:47 -  DEBUG  - setup_logging - logger.py - 14  - Logging configured successfully.

@@ -1,5 +1,9 @@
 import os
 import json
+import logging
+from src.utils.logger import setup_logger
+
+logger = setup_logger(__name__, log_file='logs/file_operations.log')    
 
 async def read(file_path):
     
@@ -89,27 +93,33 @@ async def read_json(file_path):
 async def write_json(file_path, data_to_write):
     
     payload = { 
-           "status": False,
-           "data": "",
-           "error": ""}
-    try:
-        # file_exist = os.path.exists(file_path)
-        # file_size  = os.path.getsize(file_path) == 0
-        
-        # WRITE WHEN IF FILE IS NOT EXIST OR EMPTY
-        # This prevents overwriting existing data unless the file is empty
-        # if not file_exist or file_size:
-        
-        with open(file_path, 'w') as file:
-            json.dump(data_to_write, file, indent=4)
+                "status": False,
+                "data": "",
+                "error": "",
+                "msg": ""
+             }
 
-            payload["status"] = True
-            payload["data"]   = data_to_write
+    # WRITE WHEN IF FILE IS NOT EXIST OR EMPTY
+    # This prevents overwriting existing data unless the file is empty
+    if not os.path.exists(file_path) or os.path.getsize(file_path) == 0:
+        try:
+                with open(file_path, 'w') as file:
+                    json.dump(data_to_write, file, indent=4)
 
-            print(f"File write successfully: {file_path}")
-            return payload
+                payload["status"] = True
+                payload["data"]   = data_to_write
 
-    except Exception as e:
-        payload["error"] = (f"Error while writing {file_path}: {e}")
-        print(f"Error while writing {file_path}: {e}")
-        return  payload
+                print(f"File write successfully: {file_path}")
+                logger.info(f"File write successfully: {file_path}")
+                return payload
+
+        except Exception as e:
+            payload["error"] = (f"Error while writing {file_path}: {e}")
+            print(f"Error while writing {file_path}: {e}")
+            logger.error(f"Error ss while writing {file_path}: {e}")
+            return  payload 
+    else:
+        payload["status"] = True
+        payload["msg"] = f"File already exists and is not empty: {file_path}. Skipping write operation."
+        logger.warning(f"File already exists and is not empty: {file_path}. Skipping write operation.")
+       
