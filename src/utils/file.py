@@ -15,12 +15,12 @@ async def read(file_path):
         # Check if the file exists and is not empty before attempting to read
         if not os.path.exists(file_path):
             payload["error"] = f"File not found: {file_path}"
-            print(f"Error: File not found: {file_path}")
+            logger.info(f"Error: File not found: {file_path}")
             return payload
         
         if os.path.getsize(file_path) == 0:
             payload["error"] = f"File is empty: {file_path}"
-            print(f"File is empty: {file_path}")
+            logger.info(f"File is empty: {file_path}")
             return payload
         
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -28,32 +28,35 @@ async def read(file_path):
             
             payload["status"] = True
             payload["data"]   = data
+            payload["msg"]    = f"File read successfully: {file_path}"
             
-            print(f"File read successfully: {file_path}")
+            logger.info(f"File read successfully: {file_path}")
             return payload
 
     except FileNotFoundError:
         payload["error"] = f"File not found: {file_path}"
-        print(f"Error: File not found: {file_path}")
+        logger.error(f"Error: File not found: {file_path}")
         return  payload
         
 
     except UnicodeDecodeError:
         payload["error"] = (f"Error: Could not decode file: {file_path}. Check encoding.")
-        print(f"Error: Could not decode file: {file_path}. Check encoding.")
+        logger.error(f"Error: Could not decode file: {file_path}. Check encoding.")
         return  payload
 
     except Exception as e:
         payload["error"] = (f"Unexpected error while reading {file_path}: {e}")
-        print(f"Unexpected error while reading {file_path}: {e}")
+        logger.error(f"Unexpected error while reading {file_path}: {e}")
         return  payload
     
 async def read_json(file_path):
     
     payload = { 
-           "status": False,
-           "data": "",
-           "error": ""}
+        "status": False,
+        "data": "",
+        "error": "",
+        "msg": ""
+    }
     try:
         # Check if the file exists and is not empty before attempting to read
         if not os.path.exists(file_path):
@@ -71,23 +74,24 @@ async def read_json(file_path):
             
             payload["status"] = True
             payload["data"]   = data
+            payload["msg"]    = f"File read successfully: {file_path}"
             
-            print(f"File read successfully: {file_path}")
+            logger.info(f"File read successfully: {file_path}")
             return payload
 
     except FileNotFoundError:
         payload["error"] = f"File not found: {file_path}"
-        print(f"Error: File not found: {file_path}")
+        logger.error(f"Error: File not found: {file_path}")
         return  payload
 
     except UnicodeDecodeError:
         payload["error"] = (f"Error: Could not decode file: {file_path}. Check encoding.")
-        print(f"Error: Could not decode file: {file_path}. Check encoding.")
+        logger.error(f"Error: Could not decode file: {file_path}. Check encoding.")
         return  payload
 
     except Exception as e:
         payload["error"] = (f"Error while reading {file_path}: {e}")
-        print(f"Error while reading {file_path}: {e}")
+        logger.error(f"Error while reading {file_path}: {e}")
         return  payload
     
 async def write_json(file_path, data_to_write):
@@ -109,13 +113,11 @@ async def write_json(file_path, data_to_write):
                 payload["status"] = True
                 payload["data"]   = data_to_write
 
-                print(f"File write successfully: {file_path}")
                 logger.info(f"File write successfully: {file_path}")
                 return payload
 
         except Exception as e:
             payload["error"] = (f"Error while writing {file_path}: {e}")
-            print(f"Error while writing {file_path}: {e}")
             logger.error(f"Error ss while writing {file_path}: {e}")
             return  payload 
     else:
