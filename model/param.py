@@ -1,4 +1,4 @@
-from pydantic import BaseModel, PydanticUserError, ValidationError
+from pydantic import BaseModel
 
 class Embed_knowledgebase_input( BaseModel ): 
   
