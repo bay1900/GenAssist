@@ -1,7 +1,7 @@
 actionplan:
   actionplan_text_path: "./data/actionplan/actionplan - whole.txt"
   actionplan_json_path: "./data/actionplan/actionplan.json"
-  actionplan_vector_path:    "./data/actionplan/vector"
+  actionplan_vector_path:    "./data/vector"
 app_logs:
   info_file: logs/info.log
   error_file: logs/error.log

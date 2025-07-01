@@ -2,13 +2,17 @@
 import re
 import uuid
 import tiktoken
+import chromadb
+
 
 from langchain_community.document_loaders import JSONLoader
+from langchain_chroma.vectorstores import Chroma
+from langchain_openai import OpenAIEmbeddings
 
-from src.utils import file, embedding, env, yaml
+from src.utils import file, embedding, env, yaml, vector
 from src.chunk import chunker
 
-    
+  
 async def knowledge_base( is_embedding, llm ):
     
     # CONFIG
@@ -31,6 +35,8 @@ async def knowledge_base( is_embedding, llm ):
     # VECTOR
     actionplan_vector_path = actionplan_config["actionplan_vector_path"]
     
+    # METADATA FUNCTION
+    # This function extracts metadata from each JSON record and returns it as a dictionary.
     def metadata_func(record: dict, metadata: dict) -> dict:
         """
         Function to extract additional metadata from each JSON record.
@@ -42,7 +48,8 @@ async def knowledge_base( is_embedding, llm ):
         metadata["max_age"] = record.get("max_age") 
         metadata["heading"] = record.get("heading")
         return metadata
-
+    
+    # LOAD JSON FILE
     loader = JSONLoader(
         file_path= actionpan_json_path,
         jq_schema=".[]", # Select each object in the array
@@ -50,8 +57,21 @@ async def knowledge_base( is_embedding, llm ):
         metadata_func=metadata_func # Apply the custom metadata function
     )
     
-    documents = loader.load()   
-    
+    # Load the documents from the JSON file
+    # This will return a list of Document objects with the specified content and metadata.
+    documents = loader.load() 
+    api_key = await env.read("OPENAI_KEY")
+    print ( f"API Key: {api_key}" )
+    embeddings = OpenAIEmbeddings(model="text-embedding-3-large", api_key = api_key ) 
+    ids = [item['id'] for item in chunks["data"]]
+
+    vector_store = await vector.get_or_create_vector(
+            collection_name= f"{llm}_collection",
+            embedding_model=embeddings,
+            persist_directory=actionplan_vector_path,
+            llm=llm,
+            documents=documents
+    )
     
     return "chunks"
     

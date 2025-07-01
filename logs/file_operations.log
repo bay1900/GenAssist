@@ -1,27 +1,48 @@
-INFO: - 2025-07-01 18:08:18 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-01 18:08:18 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-01 18:08:18 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-01 18:12:01 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-01 18:12:01 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-01 18:12:01 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-01 18:14:50 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-01 18:14:50 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-01 18:14:50 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-01 18:28:30 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-01 18:28:30 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-01 18:28:30 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-01 18:30:06 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-01 18:30:06 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-01 18:30:06 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-01 18:30:21 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-01 18:30:21 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-01 18:30:21 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-01 18:30:51 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-01 18:30:52 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-01 18:30:52 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-01 18:32:30 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-01 18:32:30 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-01 18:32:30 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-01 18:32:46 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-01 18:32:46 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-01 18:32:46 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-01 23:53:50 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-01 23:53:50 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-01 23:53:50 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-01 23:54:25 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-01 23:54:25 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-01 23:54:25 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-01 23:55:07 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-01 23:55:07 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-01 23:55:07 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-01 23:55:24 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-01 23:55:24 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-01 23:55:24 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-01 23:55:32 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-01 23:55:32 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-01 23:55:32 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-01 23:57:31 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-01 23:57:31 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-01 23:57:31 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-02 00:09:42 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-02 00:09:42 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-02 00:09:42 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-02 00:10:01 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-02 00:10:01 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-02 00:10:01 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-02 00:11:07 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-02 00:11:07 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-02 00:11:07 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-02 00:11:43 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-02 00:11:43 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-02 00:11:43 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-02 00:11:56 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-02 00:11:56 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-02 00:11:56 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-02 00:16:02 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-02 00:16:02 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-02 00:16:02 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-02 00:16:31 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-02 00:16:31 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-02 00:16:31 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-02 00:16:37 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-02 00:16:37 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-02 00:16:37 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-02 00:16:47 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-02 00:16:47 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-02 00:16:47 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-02 00:16:51 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-02 00:16:51 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-02 00:16:52 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.

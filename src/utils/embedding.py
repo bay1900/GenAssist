@@ -36,14 +36,14 @@ def embed_model ( llm, api):
     return model 
     
 def embed( llm ):  
-    
-    payload = { 
+     
+    payload = {  
                 "status": False,
                 "data": "",
-                "error": "",
+                "error": "", 
                 "msg": ""
               }  
-    
+     
     # PATH
     config_path = env.read( "MODEL_CONFIG")
     
