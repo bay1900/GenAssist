@@ -6,23 +6,6 @@ import tiktoken
 from src.utils import file, embedding, env, yaml
 from src.chunk import chunker
 
-
-
-async def fetch_file(path):
-    data = await file.read( path )
-
-    # # chunks = await chunker.chunk_actionplan ( data["data"] )
-    
-    # # print ( "chunks : ", chunks)
-    
-    # return data
-    
-    
-    status = data["status"]
-    if status:
-        return data["data"] 
-    else:
-        return data
     
 async def knowledge_base( is_embedding, llm ):
     
@@ -43,11 +26,7 @@ async def knowledge_base( is_embedding, llm ):
     actionpan_json_path = actionplan_config["actionplan_json_path"]
     await file.write_json( actionpan_json_path, chunks["data"] )
      
-    # if is_embedding:  
-    #     embedding.embed()
-    #     print ( "embed function here " )
-    # else: 
-    #     chunks = await chunker.chunk_actionplan ( data["data"] )
+  
     
     return "chunks"
     
