@@ -54,7 +54,9 @@ def model_config():
 @app.post("/embed_knowledgebase", dependencies=[Depends(validate_api_key)])
 async def retrive( payload: param.Embed_knowledgebase_input):
     
+    # PAYLOAD
     is_embedding = payload.is_embedding
+    llm          = payload.llm
     
-    status = await knowledge_base(is_embedding)
+    status = await knowledge_base(is_embedding, llm )
     return status 

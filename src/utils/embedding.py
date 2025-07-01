@@ -1,4 +1,7 @@
 import os 
+import json
+from pathlib import Path
+from langchain_community.document_loaders import JSONLoader
 
 import chromadb
 from langchain_openai import OpenAIEmbeddings
@@ -6,6 +9,9 @@ from langchain_mistralai import MistralAIEmbeddings
 
 from src.utils import yaml, env
 
+from src.utils.logger import setup_logger
+
+logger = setup_logger(__name__, log_file='logs/file_operations.log')    
 
 def embed_model ( llm, api): 
 
@@ -21,11 +27,11 @@ def embed_model ( llm, api):
         if model is None: 
             raise ValueError
     except ValueError as e: 
-        err = f"Error : Unsupport Embeding Model {llm}"
-        print( err ) 
+        err = f"Unsupport Embeding Model {llm}"
+        logger.error( err ) 
     except KeyError as e: 
-        err = f"Error : Unsupport Embeding Model {llm}"
-        print( err ) 
+        err = f"Unsupport Embeding Model {llm}"
+        logger.error( err ) 
            
     return model 
     
@@ -34,7 +40,8 @@ def embed( llm ):
     payload = { 
                 "status": False,
                 "data": "",
-                "error": ""
+                "error": "",
+                "msg": ""
               }  
     
     # PATH
@@ -46,9 +53,10 @@ def embed( llm ):
     try:
         llm_propery = property["data"][llm]
     except KeyError as e : 
-        err = f"Error : Unsupport Model {e}",
-        print( err )
+        err = f"Unsupport Model {e}",
         payload["error"] = err
+        
+        logger.error( err )
         return payload
             
     # VALUE
@@ -58,5 +66,8 @@ def embed( llm ):
     
     
     embed = embed_model( llm, api )
+    
+    
+    
     print ( "embed : ", embed )
     return payload

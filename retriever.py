@@ -24,7 +24,7 @@ async def fetch_file(path):
     else:
         return data
     
-async def knowledge_base( is_embedding ):
+async def knowledge_base( is_embedding, llm ):
     
     # CONFIG
     config = await yaml.read( "./config/file_path_config.yaml" )
@@ -36,9 +36,10 @@ async def knowledge_base( is_embedding ):
     status = data["status"]
     if not status: return data 
     
-    # CHUNKING JSON
+    # CHUNKING TEXT TO JSON
     chunks = await chunker.chunk_actionplan ( data["data"] )
     
+    # WRITE JSON FILE
     actionpan_json_path = actionplan_config["actionplan_json_path"]
     await file.write_json( actionpan_json_path, chunks["data"] )
      
