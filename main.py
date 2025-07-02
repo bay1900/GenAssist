@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import APIKeyHeader
 
 from model import param
-from src.utils import yaml, env
+from src.utils import yaml, env, embedding
 from dotenv import load_dotenv
 from retriever import knowledge_base
 
@@ -67,5 +67,11 @@ async def retrive( payload: param.Embed_knowledgebase_input):
     embedding_provider = payload.embedding_provider
     embedding_model    = payload.embedding_model
     
-    status = await knowledge_base(is_embedding, llm )
-    return status  
+    # EMBEDDING CLASS
+    # check if embedding provider and model are supported
+    embedding_class = await embedding.embed_class( embedding_provider, embedding_model )
+    if embedding_class["status"] == False: return embedding_class # RETURN IF ERROR
+    
+    print ( "here here !!!!!!!!!!!!!!!!!")
+    # status = await knowledge_base(is_embedding, llm )
+    return embedding_class["status"]     

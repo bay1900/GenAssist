@@ -1,55 +1,35 @@
-INFO: - 2025-07-01 23:53:50 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-01 23:53:50 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-01 23:53:50 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-01 23:54:25 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-01 23:54:25 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-01 23:54:25 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-01 23:55:07 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-01 23:55:07 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-01 23:55:07 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-01 23:55:24 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-01 23:55:24 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-01 23:55:24 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-01 23:55:32 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-01 23:55:32 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-01 23:55:32 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-01 23:57:31 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-01 23:57:31 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-01 23:57:31 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-02 00:09:42 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-02 00:09:42 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-02 00:09:42 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-02 00:10:01 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-02 00:10:01 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-02 00:10:01 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-02 00:11:07 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-02 00:11:07 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-02 00:11:07 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-02 00:11:43 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-02 00:11:43 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-02 00:11:43 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-02 00:11:56 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-02 00:11:56 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-02 00:11:56 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-02 00:16:02 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-02 00:16:02 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-02 00:16:02 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-02 00:16:31 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-02 00:16:31 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-02 00:16:31 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-02 00:16:37 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-02 00:16:37 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-02 00:16:37 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-02 00:16:47 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-02 00:16:47 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-02 00:16:47 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-02 00:16:51 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-02 00:16:51 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-02 00:16:52 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-02 18:08:19 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-02 18:08:20 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-02 18:08:30 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-02 18:08:32 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-02 18:09:33 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-02 18:09:46 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-02 18:36:38 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-02 22:44:52 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+ERROR: - 2025-07-02 22:44:52 - src.utils.embedding - Unsupport Embedding Model openai for Provider openai
+INFO: - 2025-07-02 22:48:48 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+ERROR: - 2025-07-02 22:48:48 - src.utils.embedding - Unsupport Embedding Model ``openai`` - Provider ``openai``
+INFO: - 2025-07-02 22:58:50 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+ERROR: - 2025-07-02 22:58:50 - src.utils.embedding - Unsupport Embedding Model ``openai`` - Provider ``openai``
+INFO: - 2025-07-02 22:58:53 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+ERROR: - 2025-07-02 22:58:53 - src.utils.embedding - Unsupport Embedding Model ``openai`` - Provider ``openai``
+INFO: - 2025-07-02 22:59:15 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-02 23:00:47 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-02 23:02:14 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+ERROR: - 2025-07-02 23:02:14 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
+INFO: - 2025-07-02 23:02:19 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+ERROR: - 2025-07-02 23:02:19 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
+INFO: - 2025-07-02 23:02:27 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+ERROR: - 2025-07-02 23:02:27 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
+INFO: - 2025-07-02 23:02:44 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+ERROR: - 2025-07-02 23:02:44 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
+INFO: - 2025-07-02 23:02:45 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+ERROR: - 2025-07-02 23:02:45 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
+INFO: - 2025-07-02 23:03:17 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+ERROR: - 2025-07-02 23:03:17 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
+INFO: - 2025-07-02 23:03:50 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+ERROR: - 2025-07-02 23:03:50 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
+INFO: - 2025-07-02 23:03:53 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+ERROR: - 2025-07-02 23:03:53 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
+INFO: - 2025-07-02 23:03:53 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+ERROR: - 2025-07-02 23:03:53 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
+INFO: - 2025-07-02 23:03:54 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+ERROR: - 2025-07-02 23:03:54 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
+INFO: - 2025-07-02 23:03:54 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+ERROR: - 2025-07-02 23:03:54 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
+INFO: - 2025-07-02 23:03:54 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+ERROR: - 2025-07-02 23:03:54 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
+INFO: - 2025-07-02 23:03:59 - src.utils.yaml - File read successfully: ./config/model_config.yaml
