@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import APIKeyHeader
 
 from model import param
-from src.utils import yaml
+from src.utils import yaml, env
 from dotenv import load_dotenv
 from retriever import knowledge_base
 
@@ -54,7 +54,8 @@ def model_config():
 @app.get("/embedding_model_list", dependencies=[Depends(validate_api_key)])
 async def embedding_model_list():
     
-    data = await yaml.read ( "./config/model_config.yaml")
+    path = await env.read( "MODEL_CONFIG")
+    data = await yaml.read( path)
     embedding_model_list = data["data"]["embedding_model_list"]
     return embedding_model_list 
 
