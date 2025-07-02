@@ -63,8 +63,9 @@ async def embedding_model_list():
 async def retrive( payload: param.Embed_knowledgebase_input):
     
     # PAYLOAD
-    is_embedding = payload.is_embedding
-    llm          = payload.llm
+    is_embedding       = payload.is_embedding
+    embedding_provider = payload.embedding_provider
+    embedding_model    = payload.embedding_model
     
     status = await knowledge_base(is_embedding, llm )
     return status  

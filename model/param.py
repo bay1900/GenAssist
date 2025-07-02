@@ -3,4 +3,5 @@ from pydantic import BaseModel
 class Embed_knowledgebase_input( BaseModel ): 
   
         is_embedding: bool
-        llm: str
+        embedding_provider: str
+        embedding_model: str
