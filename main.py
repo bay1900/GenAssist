@@ -51,6 +51,13 @@ def model_config():
     print ( data        )
     return data   
 
+@app.get("/embedding_model_list", dependencies=[Depends(validate_api_key)])
+async def embedding_model_list():
+    
+    data = await yaml.read ( "./config/model_config.yaml")
+    embedding_model_list = data["data"]["embedding_model_list"]
+    return embedding_model_list 
+
 @app.post("/embed_knowledgebase", dependencies=[Depends(validate_api_key)])
 async def retrive( payload: param.Embed_knowledgebase_input):
     
@@ -59,4 +66,4 @@ async def retrive( payload: param.Embed_knowledgebase_input):
     llm          = payload.llm
     
     status = await knowledge_base(is_embedding, llm )
-    return status 
+    return status  

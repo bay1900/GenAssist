@@ -63,3 +63,20 @@ claude:
   model_embedding_list:
     - embedding1
     - embedding2
+
+embedding_model_list:
+  openai: 
+    - text-embedding-3-small
+    - text-embedding-3-large
+  mistral:
+    - mistral-embedding-1
+    - mistral-embedding-2
+  deepseek:
+    - deepseek-embedding-1
+    - deepseek-embedding-2
+  gemini:
+    - gemini-embedding-1
+    - gemini-embedding-2
+  claude:
+    - claude-embedding-1
+    - claude-embedding-2
