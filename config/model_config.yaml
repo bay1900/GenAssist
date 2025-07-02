@@ -1,38 +1,65 @@
 openai:
   id: 1
   name:   "Chat GPT"
-  api:    "OPENAI_KEY"
+  key:    "OPENAI_KEY"
   vector: ""
-  model:  "gpt-4.1-mini"
-  model_list:
+  model_chat:  "gpt-4.1-mini"
+  model_chat_list:
     - model1
     - model2
-  desc:   ""
+  model_embedding: "text-embedding-3-small"
+  model_embedding_list:
+    - embedding1
+    - embedding2
 mistral:
   id: 2
   name:   "Mistral"
-  api:    "MISTRAL_KEY"
+  key:    "MISTRAL_KEY"
   vector: ""
-  model:  "magistral-small-2506"
-  desc:   ""
+  model_chat:  "magistral-small-2506"
+  model_chat_list:
+    - model1
+    - model2
+  model_embedding: "text-embedding-3-small"
+  model_embedding_list:
+    - embedding1
+    - embedding2
 deepseek:
   id: 3
   name:   "Deepseek"
-  api:    "DEEPSEEK_KEY"
+  key:    "DEEPSEEK_KEY"
   vector: ""
-  model:  "deepseek-chat"
-  desc:   ""
+  model_chat:  "deepseek-chat"
+  model_chat_list:
+    - model1
+    - model2
+  model_embedding: "text-embedding-3-small"
+  model_embedding_list:
+    - embedding1
+    - embedding2
 gemini:
   id: 4
   name:   "Gemini"
-  api:    "GEMINI_KEY"
+  key:    "GEMINI_KEY"
   vector: ""
-  model:  "gemini-2.0-flash"
-  desc:   ""
+  model_chat:  "gemini-2.0-flash"
+  model_chat_list:
+    - model1
+    - model2
+  model_embedding: "text-embedding-3-small"
+  model_embedding_list:
+    - embedding1
+    - embedding2
 claude:
   id: 5
   name:   "Claude"
-  api:    "CLAUDE_KEY"
+  key:    "CLAUDE_KEY"
   vector: ""
-  model:  "claude-sonnet-4-20250514"
-  desc:   ""
+  model_chat:  "gpt-4.1-mini"
+  model_chat_list:
+    - model1
+    - model2
+  model_embedding: "claude-sonnet-4-20250514"
+  model_embedding_list:
+    - embedding1
+    - embedding2
