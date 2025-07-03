@@ -7,7 +7,7 @@ import chromadb
 from langchain_openai import OpenAIEmbeddings
 from langchain_mistralai import MistralAIEmbeddings
 
-from src.utils import yaml, env
+from src.utils import yaml, env, helper
 
 from src.utils.logger import setup_logger
 
@@ -44,12 +44,14 @@ async def embed_class( embedding_provider, embedding_model ):
         logger.error( f"Unsupport Embedding Model ``{embedding_model}`` - Provider ``{embedding_provider}``" )
         return payload
     
+    KEY = await helper.get_key( embedding_provider )
+    print ( f"Key: {KEY}" )
     # GET EMBEDDING CLASS
     embedding_class = classmethod
     if embedding_provider == "openai":
-        embedding_class = OpenAIEmbeddings( api_key = "test key", model=embedding_model)
+        embedding_class = OpenAIEmbeddings( api_key = KEY, model=embedding_model)
     elif embedding_provider == "mistral":
-        embedding_class = MistralAIEmbeddings( mistra_api_key = "test key",model=embedding_model )
+        embedding_class = MistralAIEmbeddings( mistra_api_key = KEY,model=embedding_model )
         
     payload["status"] = True
     payload["data"] = embedding_class
@@ -64,7 +66,7 @@ def embed( llm ):
                 "error": "", 
                 "msg": ""
               }  
-     
+      
     # PATH
     config_path = env.read( "MODEL_CONFIG")
     

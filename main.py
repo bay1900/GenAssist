@@ -71,7 +71,7 @@ async def retrive( payload: param.Embed_knowledgebase_input):
     # check if embedding provider and model are supported
     embedding_class = await embedding.embed_class( embedding_provider, embedding_model )
     if embedding_class["status"] == False: return embedding_class # RETURN IF ERROR
+    embedding_class = embedding_class["data"] #overwrite embedding_class with the actual class
     
-    print ( "here here !!!!!!!!!!!!!!!!!")
-    # status = await knowledge_base(is_embedding, llm )
-    return embedding_class["status"]     
+    status = await knowledge_base(is_embedding, embedding_provider, embedding_model, embedding_class )
+    return status   

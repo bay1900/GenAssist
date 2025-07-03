@@ -6,10 +6,13 @@ import chromadb
 
 logger = setup_logger(__name__, log_file='logs/log_vector.log')  
 
-async def get_or_create_vector( collection_name: str, embedding_model: classmethod, persist_directory: str, llm: str, documents: list):
+async def get_or_create_vector( collection_name: str, 
+                                embedding_model: classmethod, 
+                                persist_directory: str, 
+                                documents: list):
     payload = {
         "status": False,
-        "data": None, # Initialize data to None
+        "data": None,
         "error": "",
         "msg": ""
     }
@@ -50,11 +53,15 @@ async def get_or_create_vector( collection_name: str, embedding_model: classmeth
                 collection_name=collection_name
             )
 
-        payload["status"] = True
-        payload["data"] = vector_store # Store the vector_store object
-
+            payload["status"] = True
+            payload["data"] = vector_store # Store the vector_store object
+            
             
     except Exception as e:
         logger.error(f"Error in get_or_create_vector: {e}", exc_info=True) # exc_info for traceback
         payload["error"] = str(e)
         payload["msg"] = f"Failed to create/update vector store for collection '{collection_name}' due to an error."
+    
+    
+    
+    return payload
