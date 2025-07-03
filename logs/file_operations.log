@@ -1,115 +1,61 @@
-INFO: - 2025-07-02 22:44:52 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-ERROR: - 2025-07-02 22:44:52 - src.utils.embedding - Unsupport Embedding Model openai for Provider openai
-INFO: - 2025-07-02 22:48:48 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-ERROR: - 2025-07-02 22:48:48 - src.utils.embedding - Unsupport Embedding Model ``openai`` - Provider ``openai``
-INFO: - 2025-07-02 22:58:50 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-ERROR: - 2025-07-02 22:58:50 - src.utils.embedding - Unsupport Embedding Model ``openai`` - Provider ``openai``
-INFO: - 2025-07-02 22:58:53 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-ERROR: - 2025-07-02 22:58:53 - src.utils.embedding - Unsupport Embedding Model ``openai`` - Provider ``openai``
-INFO: - 2025-07-02 22:59:15 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-02 23:00:47 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-02 23:02:14 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-ERROR: - 2025-07-02 23:02:14 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
-INFO: - 2025-07-02 23:02:19 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-ERROR: - 2025-07-02 23:02:19 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
-INFO: - 2025-07-02 23:02:27 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-ERROR: - 2025-07-02 23:02:27 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
-INFO: - 2025-07-02 23:02:44 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-ERROR: - 2025-07-02 23:02:44 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
-INFO: - 2025-07-02 23:02:45 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-ERROR: - 2025-07-02 23:02:45 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
-INFO: - 2025-07-02 23:03:17 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-ERROR: - 2025-07-02 23:03:17 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
-INFO: - 2025-07-02 23:03:50 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-ERROR: - 2025-07-02 23:03:50 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
-INFO: - 2025-07-02 23:03:53 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-ERROR: - 2025-07-02 23:03:53 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
-INFO: - 2025-07-02 23:03:53 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-ERROR: - 2025-07-02 23:03:53 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
-INFO: - 2025-07-02 23:03:54 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-ERROR: - 2025-07-02 23:03:54 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
-INFO: - 2025-07-02 23:03:54 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-ERROR: - 2025-07-02 23:03:54 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
-INFO: - 2025-07-02 23:03:54 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-ERROR: - 2025-07-02 23:03:54 - src.utils.embedding - Unsupport Embedding Model ``text-embedding-3-smal`` - Provider ``openai``
-INFO: - 2025-07-02 23:03:59 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-02 23:37:58 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:04:23 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:11:21 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:11:22 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-03 17:11:22 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-03 17:11:22 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-03 17:14:15 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:14:15 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-03 17:14:15 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-03 17:14:15 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-03 17:42:38 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:42:38 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:42:38 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-03 17:42:38 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-03 17:42:38 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-03 17:43:06 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:43:06 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:43:06 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-03 17:43:06 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-03 17:43:06 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-03 17:43:34 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:43:34 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:43:34 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-03 17:43:34 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-03 17:43:34 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-03 17:45:11 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:45:11 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:45:11 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-03 17:45:11 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-03 17:45:11 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-03 17:46:31 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:46:31 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:46:31 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-03 17:46:31 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-03 17:46:31 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-03 17:47:23 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:47:23 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:47:23 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-03 17:47:23 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-03 17:47:23 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-03 17:47:37 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:47:37 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:47:37 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-03 17:47:37 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-03 17:47:38 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-03 17:47:50 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:47:50 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:47:51 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-03 17:47:51 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-03 17:47:51 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-03 17:49:16 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:49:16 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:49:16 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-03 17:49:16 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-03 17:49:16 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-03 17:50:09 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:50:09 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:50:09 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-03 17:50:09 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-03 17:50:09 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-03 17:50:32 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:50:32 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:50:32 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-03 17:50:32 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-03 17:50:32 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-03 17:51:17 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:51:17 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:51:17 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-03 17:51:17 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-03 17:51:17 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-03 17:52:13 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:52:13 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:52:13 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-03 17:52:13 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-03 17:52:13 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
-INFO: - 2025-07-03 17:52:52 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:52:52 - src.utils.yaml - File read successfully: ./config/model_config.yaml
-INFO: - 2025-07-03 17:52:52 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
-INFO: - 2025-07-03 17:52:52 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
-WARNING: - 2025-07-03 17:52:52 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-03 19:32:56 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 19:32:56 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 19:32:57 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-03 19:32:57 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-03 19:32:57 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-03 19:35:04 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 19:35:04 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 19:35:04 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-03 19:35:04 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-03 19:35:04 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-03 19:36:04 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 19:36:04 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 19:36:04 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-03 19:36:04 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-03 19:36:05 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-03 19:36:12 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 19:36:12 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 19:36:13 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-03 19:36:13 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-03 19:36:13 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-03 19:36:37 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 19:36:37 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 19:36:37 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-03 19:36:37 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-03 19:36:37 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-03 20:53:08 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 20:53:13 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 20:53:13 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 20:53:13 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-03 20:53:13 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-03 20:53:13 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-03 20:54:06 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 20:54:06 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 20:54:06 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-03 20:54:06 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-03 20:54:06 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-03 20:55:32 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 20:55:32 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 20:55:32 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-03 20:55:32 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-03 20:55:32 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-03 20:57:31 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 20:57:31 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 20:57:31 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-03 20:57:31 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-03 20:57:31 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-03 20:58:14 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 20:58:14 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 20:58:14 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-03 20:58:14 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-03 20:58:14 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-03 20:59:18 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 20:59:18 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 20:59:18 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-03 20:59:18 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-03 20:59:18 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO: - 2025-07-03 20:59:32 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 20:59:32 - src.utils.yaml - File read successfully: ./config/model_config.yaml
+INFO: - 2025-07-03 20:59:32 - src.utils.yaml - File read successfully: ./config/file_path_config.yaml
+INFO: - 2025-07-03 20:59:32 - src.utils.file - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING: - 2025-07-03 20:59:32 - src.utils.file - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.

@@ -17,24 +17,26 @@ async def knowledge_base( is_embedding, embedding_provider, embedding_model, emb
     
     # CONFIG
     config = await yaml.read( "./config/file_path_config.yaml" )
-    actionplan_config = config["data"]["actionplan"]
+    if not config["status"]: return config
     
+    # CONFIG ACTIONPLAN
+    actionplan_config = config["data"]["actionplan"]
+
     # ACTIONPLAN TEXT READ
     actionplan_text_path = actionplan_config["actionplan_text_path"]
-    data = await file.read( actionplan_text_path )
-    status = data["status"]
-    if not status: return data 
+    actionplan_text = await file.read( actionplan_text_path )
+    if not actionplan_text["status"]: return actionplan_text 
     
     # CHUNKING TEXT TO JSON
-    chunks = await chunker.chunk_actionplan ( data["data"] )
+    text = actionplan_text["data"]
+    chunks = await chunker.chunk_actionplan ( text )
+    if not chunks["status"]: return chunks
     
     # WRITE JSON FILE
     # if json file exists, it will skip creating a new one
     actionpan_json_path = actionplan_config["actionplan_json_path"]
-    await file.write_json( actionpan_json_path, chunks["data"] )
-    
-    # VECTOR
-    actionplan_vector_path = actionplan_config["actionplan_vector_path"]
+    actionpan_json      = await file.write_json( actionpan_json_path, chunks["data"] )
+    if not actionpan_json["status"]: return actionpan_json
     
     # METADATA FUNCTION
     # This function extracts metadata from each JSON record and returns it as a dictionary.
@@ -61,17 +63,16 @@ async def knowledge_base( is_embedding, embedding_provider, embedding_model, emb
     # Load the documents from the JSON file
     # This will return a list of Document objects with the specified content and metadata.
     documents = loader.load() 
-    # api_key = await env.read("OPENAI_KEY")
-    # print ( f"API Key: {api_key}" )
-    embeddings = embedding_class
-    ids = [item['id'] for item in chunks["data"]]
 
+    embeddings = embedding_class
+    
+    # VECTOR
+    actionplan_vector_path = actionplan_config["actionplan_vector_path"]
     vector_store = await vector.get_or_create_vector(
             collection_name= f"{embedding_provider}_{embedding_model}_collection",
             embedding_model=embeddings,
             persist_directory=actionplan_vector_path,
             documents=documents
     )
-    
     return vector_store
     

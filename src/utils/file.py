@@ -124,4 +124,5 @@ async def write_json(file_path, data_to_write):
         payload["status"] = True
         payload["msg"] = f"File already exists and is not empty: {file_path}. Skipping write operation."
         logger.warning(f"File already exists and is not empty: {file_path}. Skipping write operation.")
-       
+    
+    return payload

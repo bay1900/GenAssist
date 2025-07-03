@@ -30,8 +30,8 @@ async def get_or_create_vector( collection_name: str,
         
         if exist:
             # Collection already exists, load it and add documents
-            logger.info(f"Collection '{collection_name}' already exists in '{persist_directory}'. Loading it and adding new documents.")
-            payload["msg"] = f"Collection '{collection_name}' already existed. Documents added."
+            logger.info(f"Collection '{collection_name}' already exists in '{persist_directory}'")
+            payload["msg"] = f"Collection '{collection_name}' already existed"
 
             # LangChain's Chroma wrapper to load the existing collection
             vector_store = Chroma(
@@ -40,21 +40,24 @@ async def get_or_create_vector( collection_name: str,
                 collection_name=collection_name
             )
             # Add the new documents to the existing collection
-            vector_store.add_documents(documents)
+            # vector_store.add_documents(documents)
         else:
             # Collection does not exist, create it from documents
             logger.info(f"Collection '{collection_name}' does not exist in '{persist_directory}'. Creating a new one.")
             payload["msg"] = f"New collection '{collection_name}' created. Documents added."
 
+            persistent_client = chromadb.PersistentClient()
+            collection = persistent_client.get_or_create_collection(collection_name)
+            
             vector_store = Chroma.from_documents(
                 documents=documents,
                 embedding=embedding_model,
                 persist_directory=persist_directory,
                 collection_name=collection_name
-            )
+            ) 
 
             payload["status"] = True
-            payload["data"] = vector_store # Store the vector_store object
+            # payload["data"] = vector_store # Store the vector_store object
             
             
     except Exception as e:
