@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import APIKeyHeader
 
 from model import param
-from src.utils import yaml, env, embedding
+from src.utils import yaml, env, embedding, vector
 from dotenv import load_dotenv
 from retriever import knowledge_base
 
@@ -59,6 +59,16 @@ async def embedding_model_list():
     embedding_model_list = data["data"]["embedding_model_list"]
     return embedding_model_list 
 
+@app.post("/chroma", dependencies=[Depends(validate_api_key)])
+async def chroma_func( payload: param.Chroma_input):
+    
+    func_code = payload.func_code
+    
+    result = await vector.chroma_controller( func_code )
+    
+    return result
+
+
 @app.post("/embed_knowledgebase", dependencies=[Depends(validate_api_key)])
 async def retrive( payload: param.Embed_knowledgebase_input):
     
@@ -75,3 +85,4 @@ async def retrive( payload: param.Embed_knowledgebase_input):
     
     status = await knowledge_base(is_embedding, embedding_provider, embedding_model, embedding_class )
     return status   
+
