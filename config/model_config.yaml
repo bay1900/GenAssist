@@ -80,3 +80,10 @@ embedding_model_list:
   claude:
     - claude-embedding-1
     - claude-embedding-2
+
+rewritter_model:
+  openai:
+    model: "gpt-4.1-mini"
+    prompt: "Rewrite the following text to make it more concise and clear."
+    temperature: 0.7
+    max_tokens: 150

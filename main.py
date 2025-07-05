@@ -6,6 +6,7 @@ from fastapi.security import APIKeyHeader
 
 from model import param
 from src.utils import yaml, env, embedding, vector
+from agent import query_rewrite
 from dotenv import load_dotenv
 from retriever import knowledge_base
 
@@ -86,3 +87,17 @@ async def retrive( payload: param.Embed_knowledgebase_input):
     status = await knowledge_base(is_embedding, embedding_provider, embedding_model, embedding_class )
     return status   
 
+@app.post("/chat", dependencies=[Depends(validate_api_key)])
+async def chat_gen( payload: param.Chat_input):
+    
+    # provider          = payload.provider
+    # gene              = payload.gene
+    # min_age           = payload.min_age
+    # max_age           = payload.max_age
+    patient_question  = payload.patient_question
+    
+    
+    rewritten = await query_rewrite.query_rewriter(patient_question, provider = "openai" )
+    
+
+    return rewritten

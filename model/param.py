@@ -10,3 +10,11 @@ class Chroma_input( BaseModel ):
   
         # persist_directory: str
         func_code: str
+        
+class Chat_input( BaseModel ):
+        
+        provider: str
+        gene: str
+        min_age: int
+        max_age: int
+        patient_question: str
