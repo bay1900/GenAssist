@@ -17,38 +17,37 @@ async def query_rewriter( payload_input, provider="openai"):
     payload = {
                 "status": False,
                 "data": "",
-                "error": "", 
                 "msg": "",
                 "req_id": req_id
               }
     try: 
-        llm = await get_chat_model( provider)
-        llm = llm["data"]
+        llm = await get_chat_model( provider )
+        if not llm["status"]:  
+            payload["msg"] = llm["msg"]         
+            return payload
         
-        # TODO get promt from model config or consider if from promt folder so choose one
-        prompt = PromptTemplate.from_template("Rewrite the following query to be more specific:\n{patient_question}")
-        chain  = prompt | llm
-        
-        result  = chain.invoke(
-            { 
-                # "output_language": "English",
-                "patient_question": "are you ai ?",
-            }
-        )
+        llm_model  = llm["data"]["model"]
+        llm_prompt = llm["data"]["prompt"]
+        prompt_tempalte = PromptTemplate.from_template(llm_prompt)
+        chain  = prompt_tempalte | llm_model
+        result  = chain.invoke({ 
+                                # "output_language": "English",
+                                "patient_question": f"{patient_question}"
+                              })
         data = { 
-                "patient_question": "test2",
+                "patient_question": f"{patient_question}",
                 "patient_question_rewritten" : result.content,
                 "usage" : result.usage_metadata
                 }
-        
+         
         payload["status"] = True
         payload["data"]   = data
         
         user_chat_hist_path = f"./data/chat_hist/{user}.json"
         await helper.save_chat( user_chat_hist_path, data )
     except Exception as e: 
-        payload["error"] = e
+        payload["msg"] = e
         logger.error( e)
-    
+        
     return payload
 

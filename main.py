@@ -4,7 +4,7 @@ from fastapi import FastAPI, Depends, HTTPException, status, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import APIKeyHeader
 
-from llm import embedding
+from src.llm import embedding
 from model import param
 from src.utils import yaml, env, vector
 from agent import query_rewrite
@@ -21,7 +21,7 @@ app = FastAPI(
     description="",
     version="1.0.0",
 )
-
+ 
 # CORS configuration
 ALLOWED_ORIGINS = [
     "http://localhost:8000",
@@ -91,14 +91,6 @@ async def retrive( payload: param.Embed_knowledgebase_input):
 @app.post("/chat", dependencies=[Depends(validate_api_key)])
 async def chat_gen( payload: param.Chat_input):
     
-    # provider          = payload.provider
-    # gene              = payload.gene
-    # min_age           = payload.min_age
-    # max_age           = payload.max_age
-    # patient_question  = payload.patient_question
-    
-    
     rewritten = await query_rewrite.query_rewriter(payload, provider = "openai" )
     
-
     return rewritten

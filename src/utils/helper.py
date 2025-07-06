@@ -8,16 +8,29 @@ logger = setup_logger(__name__, log_file='logs/file_operations.log')
 
 
 async def get_key ( provider): 
-    # CHECK IF PROVIDER SUPPORT
-    path = await env.read( "MODEL_CONFIG")
-    if not path["status"]: return path 
-    path = path["data"]
+    payload = {
+                "status": False,
+                "data": "",
+                "msg": ""
+              }
     
-    data = await yaml.read( path )
-    env_key = data["data"][f"{provider}"]["key"]
-    key = await env.read( env_key ) 
+    try:
+        config = await yaml.read( "./config/model_config.yaml" )
+        if not config["status"]: 
+            payload["msg"] = config["msg"]
+            return payload 
     
-    return key
+        env_key = config["data"][f"{provider}"]["key"]
+        key = await env.read( env_key ) 
+        
+        payload["status"] = True
+        payload["data"]   = key["data"]
+        
+    except Exception as e: 
+        payload["msg"] = e
+        logger.error( e )
+    
+    return payload
 
 
 async def save_chat(user_chat_hist_path, data_to_write): 

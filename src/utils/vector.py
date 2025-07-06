@@ -1,6 +1,6 @@
 
 from langchain_chroma.vectorstores import Chroma
-from llm import embedding
+from src.llm import embedding
 from src.utils.logger import setup_logger
 
 from src.utils import yaml, env, vector

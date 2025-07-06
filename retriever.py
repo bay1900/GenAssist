@@ -9,7 +9,7 @@ from langchain_community.document_loaders import JSONLoader
 from langchain_chroma.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
 
-from llm import embedding
+from src.llm import embedding
 from src.utils import file, env, yaml, vector, helper
 from src.chunk import chunker
 

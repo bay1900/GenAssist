@@ -12,17 +12,17 @@ async def read ( file_path ):
     payload = { 
            "status": False,
            "data": "",
-           "error": ""}
+           "msg": ""}
     try:
         # Check if the file exists and is not empty before attempting to read
         if not os.path.exists(file_path):
-            payload["error"] = f"File not found: {file_path}"
-            logger.error(f"Error: File not found: {file_path}")
+            payload["msg"] = f"File not found: {file_path}"
+            logger.warning(f"Error: File not found: {file_path}")
             return payload
         
         if os.path.getsize(file_path) == 0:
-            payload["error"] = f"File is empty: {file_path}"
-            logger.error(f"File is empty: {file_path}")
+            payload["msg"] = f"File is empty: {file_path}"
+            logger.warning(f"File is empty: {file_path}")
             return payload
         
         with open( file_path, 'r') as file:
@@ -35,14 +35,14 @@ async def read ( file_path ):
             return payload
 
     except FileNotFoundError:
-        payload["error"] = f"File not found: {file_path}"
-        logger.error(f"Error: File not found: {file_path}")
+        payload["msg"] = f"File not found: {file_path}"
+        logger.warning(f"Error: File not found: {file_path}")
         return  payload
         
 
     except UnicodeDecodeError:
         payload["error"] = (f"Error: Could not decode file: {file_path}. Check encoding.")
-        logger.error(f"Error: Could not decode file: {file_path}. Check encoding.")
+        logger.warning(f"Error: Could not decode file: {file_path}. Check encoding.")
         return  payload
 
     except Exception as e:
