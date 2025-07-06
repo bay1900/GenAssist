@@ -1,5 +1,5 @@
 from langchain_core.prompts import PromptTemplate
-
+from agent import query_hyde
 from src.utils import helper
 from src.llm.chat_model import get_chat_model
 import uuid
@@ -33,14 +33,29 @@ async def query_rewriter( payload_input, provider="openai"):
         llm_prompt = llm["data"]["prompt"]
         prompt_tempalte = PromptTemplate.from_template(llm_prompt)
         chain  = prompt_tempalte | llm_model
-        result  = chain.invoke({ 
+        rewrite_result  = chain.invoke({ 
                                 # "output_language": "English",
                                 "patient_question": f"{patient_question}"
                               })
+        patient_question_rewritten = rewrite_result.content
+        patient_question_rewritten_usage = rewrite_result.usage_metadata
+        
+        patient_question_hyde = await query_hyde.query_hyde( patient_question_rewritten, provider = "openai" )
+        if not patient_question_hyde["status"]:
+            logger.warning( patient_question_hyde["msg"] )
+        patient_question_hyde_content = patient_question_hyde['data'].content
+        patient_question_hyde_usage   = patient_question_hyde['data'].usage_metadata
+        
+        usage = { 
+                 "rewritten": patient_question_rewritten_usage,
+                 "hyde": patient_question_hyde_usage
+                }
+        
         data = { 
                 "patient_question": f"{patient_question}",
-                "patient_question_rewritten" : result.content,
-                "usage" : result.usage_metadata
+                "patient_question_rewritten" : patient_question_rewritten,
+                "patient_question_hyde" : patient_question_hyde_content,
+                "usage" : usage
                 }
          
         payload["status"] = True

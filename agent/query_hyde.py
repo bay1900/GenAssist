@@ -6,13 +6,13 @@ import uuid
 from src.utils.logger import setup_logger, request_id_var
 logger = setup_logger(__name__, log_file='logs/file_model.log')  
 
-async def query_hyde( payload_input, provider="openai"):
+async def query_hyde( query, provider="openai"):
+    
+    # model_config.yaml
+    root_key = "hyde_model" 
     
     req_id = str(uuid.uuid4())
     request_id_var.set(req_id)
-    
-    user              = payload_input.user
-    patient_question  = payload_input.patient_question
     
     payload = {
                 "status": False,
@@ -21,7 +21,7 @@ async def query_hyde( payload_input, provider="openai"):
                 "req_id": req_id
               }
     try: 
-        llm = await get_chat_model( provider )
+        llm = await get_chat_model( provider, root_key )
         if not llm["status"]:  
             payload["msg"] = llm["msg"]         
             return payload
@@ -32,19 +32,14 @@ async def query_hyde( payload_input, provider="openai"):
         chain   = prompt_tempalte | llm_model
         result  = chain.invoke({ 
                                 # "output_language": "English",
-                                "patient_question": f"{patient_question}"
+                                "patient_question": f"{query}"
                               })
-        data = { 
-                "patient_question": f"{patient_question}",
-                "patient_question_rewritten" : result.content,
-                "usage" : result.usage_metadata
-                }
+
          
         payload["status"] = True
-        payload["data"]   = data
+        payload["data"]   = result
         
-        user_chat_hist_path = f"./data/chat_hist/{user}.json"
-        await helper.save_chat( user_chat_hist_path, data )
+
     except Exception as e: 
         payload["msg"] = e
         logger.error( e)
