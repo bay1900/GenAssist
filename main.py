@@ -94,10 +94,10 @@ async def chat_gen( payload: param.Chat_input):
     # gene              = payload.gene
     # min_age           = payload.min_age
     # max_age           = payload.max_age
-    patient_question  = payload.patient_question
+    # patient_question  = payload.patient_question
     
     
-    rewritten = await query_rewrite.query_rewriter(patient_question, provider = "openai" )
+    rewritten = await query_rewrite.query_rewriter(payload, provider = "openai" )
     
 
     return rewritten

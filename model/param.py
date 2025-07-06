@@ -12,7 +12,7 @@ class Chroma_input( BaseModel ):
         func_code: str
         
 class Chat_input( BaseModel ):
-        
+        user: str
         provider: str
         gene: str
         min_age: int
