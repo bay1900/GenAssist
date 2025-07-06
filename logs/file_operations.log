@@ -294,3 +294,37 @@ INFO - 2025-07-06 17:39:28 - src.utils.yaml - [Request-ID: 89f69fc2-73c0-4340-a0
 INFO - 2025-07-06 17:43:22 - src.utils.yaml - [Request-ID: f8f60a43-6e01-4875-9b11-ea6b591e9120] - File read successfully: ./config/model_config.yaml
 INFO - 2025-07-06 17:43:22 - src.utils.yaml - [Request-ID: f8f60a43-6e01-4875-9b11-ea6b591e9120] - File read successfully: ./config/model_config.yaml
 INFO - 2025-07-06 17:43:24 - src.utils.file - [Request-ID: f8f60a43-6e01-4875-9b11-ea6b591e9120] - File write successfully: ./data/chat_hist/bay.json
+INFO - 2025-07-06 19:15:30 - src.utils.yaml - [Request-ID: 840e2626-3db2-4260-886a-9ec0f552942b] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-06 19:15:30 - src.utils.helper - [Request-ID: 840e2626-3db2-4260-886a-9ec0f552942b] - 'openai'
+WARNING - 2025-07-06 19:15:30 - src.llm.chat_model - [Request-ID: 840e2626-3db2-4260-886a-9ec0f552942b] - 'openai'
+INFO - 2025-07-06 19:16:16 - src.utils.yaml - [Request-ID: b8d64083-851e-4a99-b24c-ce6001ff1ca0] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-06 19:16:16 - src.utils.helper - [Request-ID: b8d64083-851e-4a99-b24c-ce6001ff1ca0] - 'openai'
+WARNING - 2025-07-06 19:16:16 - src.llm.chat_model - [Request-ID: b8d64083-851e-4a99-b24c-ce6001ff1ca0] - 'openai'
+INFO - 2025-07-06 19:17:45 - src.utils.yaml - [Request-ID: fdcb2460-b25b-4631-8db5-1a26a9fdf85b] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-06 19:17:45 - src.utils.helper - [Request-ID: fdcb2460-b25b-4631-8db5-1a26a9fdf85b] - 'openai'
+WARNING - 2025-07-06 19:17:45 - src.llm.chat_model - [Request-ID: fdcb2460-b25b-4631-8db5-1a26a9fdf85b] - 'openai'
+INFO - 2025-07-06 19:20:01 - src.utils.yaml - [Request-ID: 0a70b1e1-67e7-43ef-b3a4-7f0b2f5f791d] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-06 19:20:01 - src.utils.helper - [Request-ID: 0a70b1e1-67e7-43ef-b3a4-7f0b2f5f791d] - 'openai'
+WARNING - 2025-07-06 19:20:01 - src.llm.chat_model - [Request-ID: 0a70b1e1-67e7-43ef-b3a4-7f0b2f5f791d] - 'openai'
+INFO - 2025-07-06 19:20:01 - src.utils.yaml - [Request-ID: 8b75a5d4-debc-4e44-ac93-2843fd6b90f3] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-06 19:20:01 - src.utils.helper - [Request-ID: 8b75a5d4-debc-4e44-ac93-2843fd6b90f3] - 'openai'
+WARNING - 2025-07-06 19:20:01 - src.llm.chat_model - [Request-ID: 8b75a5d4-debc-4e44-ac93-2843fd6b90f3] - 'openai'
+INFO - 2025-07-06 19:20:02 - src.utils.yaml - [Request-ID: 6d6bf507-6445-45e5-845a-abac9cd0fde8] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-06 19:20:02 - src.utils.helper - [Request-ID: 6d6bf507-6445-45e5-845a-abac9cd0fde8] - 'openai'
+WARNING - 2025-07-06 19:20:02 - src.llm.chat_model - [Request-ID: 6d6bf507-6445-45e5-845a-abac9cd0fde8] - 'openai'
+INFO - 2025-07-06 19:20:02 - src.utils.yaml - [Request-ID: 60855766-c1f0-4f3b-8b25-842853d3361b] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-06 19:20:02 - src.utils.helper - [Request-ID: 60855766-c1f0-4f3b-8b25-842853d3361b] - 'openai'
+WARNING - 2025-07-06 19:20:02 - src.llm.chat_model - [Request-ID: 60855766-c1f0-4f3b-8b25-842853d3361b] - 'openai'
+INFO - 2025-07-06 19:21:21 - src.utils.yaml - [Request-ID: 7f1c9fa6-0c03-4d96-a31c-fdc1582f0c38] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-06 19:21:21 - src.utils.helper - [Request-ID: 7f1c9fa6-0c03-4d96-a31c-fdc1582f0c38] - 'openai'
+WARNING - 2025-07-06 19:21:21 - src.llm.chat_model - [Request-ID: 7f1c9fa6-0c03-4d96-a31c-fdc1582f0c38] - 'openai'
+INFO - 2025-07-06 19:21:46 - src.utils.yaml - [Request-ID: ad4ae24d-dadc-45d3-9574-e5fda50cc26f] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-06 19:21:46 - src.utils.helper - [Request-ID: ad4ae24d-dadc-45d3-9574-e5fda50cc26f] - 'openai'
+WARNING - 2025-07-06 19:21:46 - src.llm.chat_model - [Request-ID: ad4ae24d-dadc-45d3-9574-e5fda50cc26f] - 'openai'
+INFO - 2025-07-06 19:21:48 - src.utils.yaml - [Request-ID: 4eea8576-b727-45ad-974a-1f4b6337ebc3] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-06 19:21:48 - src.utils.helper - [Request-ID: 4eea8576-b727-45ad-974a-1f4b6337ebc3] - 'openai'
+WARNING - 2025-07-06 19:21:48 - src.llm.chat_model - [Request-ID: 4eea8576-b727-45ad-974a-1f4b6337ebc3] - 'openai'
+INFO - 2025-07-06 19:24:49 - src.utils.yaml - [Request-ID: f1576b33-9500-44c2-80e7-54e322e855bd] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-06 19:24:49 - src.utils.yaml - [Request-ID: f1576b33-9500-44c2-80e7-54e322e855bd] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-06 19:25:40 - src.utils.yaml - [Request-ID: a7c090e8-e475-42d9-a186-2851bbb222c2] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-06 19:25:40 - src.utils.yaml - [Request-ID: a7c090e8-e475-42d9-a186-2851bbb222c2] - File read successfully: ./config/model_config.yaml

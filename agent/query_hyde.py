@@ -6,10 +6,7 @@ import uuid
 from src.utils.logger import setup_logger, request_id_var
 logger = setup_logger(__name__, log_file='logs/file_model.log')  
 
-async def query_rewriter( payload_input, provider="openai"):
-    
-    # model_config.yaml
-    root_key = "rewritter_model" 
+async def query_hyde( payload_input, provider="openai"):
     
     req_id = str(uuid.uuid4())
     request_id_var.set(req_id)
@@ -24,7 +21,7 @@ async def query_rewriter( payload_input, provider="openai"):
                 "req_id": req_id
               }
     try: 
-        llm = await get_chat_model( provider, root_key )
+        llm = await get_chat_model( provider )
         if not llm["status"]:  
             payload["msg"] = llm["msg"]         
             return payload
@@ -32,7 +29,7 @@ async def query_rewriter( payload_input, provider="openai"):
         llm_model  = llm["data"]["model"]
         llm_prompt = llm["data"]["prompt"]
         prompt_tempalte = PromptTemplate.from_template(llm_prompt)
-        chain  = prompt_tempalte | llm_model
+        chain   = prompt_tempalte | llm_model
         result  = chain.invoke({ 
                                 # "output_language": "English",
                                 "patient_question": f"{patient_question}"

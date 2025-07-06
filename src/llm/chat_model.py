@@ -17,7 +17,8 @@ PROVIDER_MAPPING = {
     "claude"  : ChatAnthropic
 }
 
-async def get_chat_model( provider: str ):
+async def get_chat_model( provider: str, root_key: str ):
+ 
     
     payload = {
                 "status": False,
@@ -48,7 +49,7 @@ async def get_chat_model( provider: str ):
             payload["msg"] = config["msg"]
             logger.warning( config["msg"] )
             return payload 
-        config = config["data"]["rewritter_model"][f"{provider}"]
+        config = config["data"][root_key][f"{provider}"]
         
         # MODEL CLIENT
         chat_model = selected_chat_model(

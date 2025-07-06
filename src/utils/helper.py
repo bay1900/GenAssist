@@ -20,7 +20,7 @@ async def get_key ( provider):
             payload["msg"] = config["msg"]
             return payload 
     
-        env_key = config["data"][f"{provider}"]["key"]
+        env_key = config["data"]["provider_model"][f"{provider}"]["key"]
         key = await env.read( env_key ) 
         
         payload["status"] = True

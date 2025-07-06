@@ -1,68 +1,69 @@
-openai:
-  id: 1
-  name:   "Chat GPT"
-  key:    "OPENAI_KEY"
-  vector: ""
-  model_chat:  "gpt-4.1-mini"
-  model_chat_list:
-    - model1
-    - model2
-  model_embedding: "text-embedding-3-small"
-  model_embedding_list:
-    - embedding1
-    - embedding2
-mistral:
-  id: 2
-  name:   "Mistral"
-  key:    "MISTRAL_KEY"
-  vector: ""
-  model_chat:  "magistral-small-2506"
-  model_chat_list:
-    - model1
-    - model2
-  model_embedding: "text-embedding-3-small"
-  model_embedding_list:
-    - embedding1
-    - embedding2
-deepseek:
-  id: 3
-  name:   "Deepseek"
-  key:    "DEEPSEEK_KEY"
-  vector: ""
-  model_chat:  "deepseek-chat"
-  model_chat_list:
-    - model1
-    - model2
-  model_embedding: "text-embedding-3-small"
-  model_embedding_list:
-    - embedding1
-    - embedding2
-gemini:
-  id: 4
-  name:   "Gemini"
-  key:    "GEMINI_KEY"
-  vector: ""
-  model_chat:  "gemini-2.0-flash"
-  model_chat_list:
-    - model1
-    - model2
-  model_embedding: "text-embedding-3-small"
-  model_embedding_list:
-    - embedding1
-    - embedding2
-claude:
-  id: 5
-  name:   "Claude"
-  key:    "CLAUDE_KEY"
-  vector: ""
-  model_chat:  "gpt-4.1-mini"
-  model_chat_list:
-    - model1
-    - model2
-  model_embedding: "claude-sonnet-4-20250514"
-  model_embedding_list:
-    - embedding1
-    - embedding2
+provider_model:
+  openai:
+    id: 1
+    name:   "Chat GPT"
+    key:    "OPENAI_KEY"
+    vector: ""
+    model_chat:  "gpt-4.1-mini"
+    model_chat_list:
+      - model1
+      - model2
+    model_embedding: "text-embedding-3-small"
+    model_embedding_list:
+      - embedding1
+      - embedding2
+  mistral:
+    id: 2
+    name:   "Mistral"
+    key:    "MISTRAL_KEY"
+    vector: ""
+    model_chat:  "magistral-small-2506"
+    model_chat_list:
+      - model1
+      - model2
+    model_embedding: "text-embedding-3-small"
+    model_embedding_list:
+      - embedding1
+      - embedding2
+  deepseek:
+    id: 3
+    name:   "Deepseek"
+    key:    "DEEPSEEK_KEY"
+    vector: ""
+    model_chat:  "deepseek-chat"
+    model_chat_list:
+      - model1
+      - model2
+    model_embedding: "text-embedding-3-small"
+    model_embedding_list:
+      - embedding1
+      - embedding2
+  gemini:
+    id: 4
+    name:   "Gemini"
+    key:    "GEMINI_KEY"
+    vector: ""
+    model_chat:  "gemini-2.0-flash"
+    model_chat_list:
+      - model1
+      - model2
+    model_embedding: "text-embedding-3-small"
+    model_embedding_list:
+      - embedding1
+      - embedding2
+  claude:
+    id: 5
+    name:   "Claude"
+    key:    "CLAUDE_KEY"
+    vector: ""
+    model_chat:  "gpt-4.1-mini"
+    model_chat_list:
+      - model1
+      - model2
+    model_embedding: "claude-sonnet-4-20250514"
+    model_embedding_list:
+      - embedding1
+      - embedding2
 
 embedding_model_list:
   openai: 
@@ -82,6 +83,24 @@ embedding_model_list:
     - claude-embedding-2
 
 rewritter_model:
+  openai:
+    model: "gpt-4.1-mini"
+    temperature: 0.7
+    max_tokens: 150
+    prompt: |
+      You are an expert content rewriter.
+      Your task is to take the provided text and rewrite it to be:
+      - More concise
+      - Clearer and easier to understand
+      - Free of jargon
+
+      Original text:
+      ---
+      {patient_question}
+      ---
+      Rewritten text:
+
+hyde_model:
   openai:
     model: "gpt-4.1-mini"
     temperature: 0.7
