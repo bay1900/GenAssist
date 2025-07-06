@@ -2,11 +2,14 @@ from langchain_core.prompts import PromptTemplate
 
 from src.utils import helper
 from src.llm.chat_model import get_chat_model
-
-from src.utils.logger import setup_logger
+import uuid
+from src.utils.logger import setup_logger, request_id_var
 logger = setup_logger(__name__, log_file='logs/file_model.log')  
 
 async def query_rewriter( payload_input, provider="openai"):
+    
+    req_id = str(uuid.uuid4())
+    request_id_var.set(req_id)
     
     user              = payload_input.user
     patient_question  = payload_input.patient_question
@@ -15,7 +18,8 @@ async def query_rewriter( payload_input, provider="openai"):
                 "status": False,
                 "data": "",
                 "error": "", 
-                "msg": ""
+                "msg": "",
+                "req_id": req_id
               }
     try: 
         llm = await get_chat_model( provider)

@@ -34,12 +34,12 @@ async def get_chat_model(model: str,
                 logger.error(f"Unsupported model: {model}. Available models: {list(MODEL_MAPPING.keys())}")
                 payload["error"] = f"Unsupported model: {model}. Available models: {list(MODEL_MAPPING.keys())}"
                 return payload
-                
+        
         KEY    = await helper.get_key( provider )
+        KEY    = KEY["data"]
         
         config = await yaml.read( "./config/model_config.yaml" )
         config = config["data"]["rewritter_model"][f"{provider}"]
-        
         
         chat_model = selected_chat_model(
                         api_key = KEY,

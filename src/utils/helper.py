@@ -10,6 +10,9 @@ logger = setup_logger(__name__, log_file='logs/file_operations.log')
 async def get_key ( provider): 
     # CHECK IF PROVIDER SUPPORT
     path = await env.read( "MODEL_CONFIG")
+    if not path["status"]: return path 
+    path = path["data"]
+    
     data = await yaml.read( path )
     env_key = data["data"][f"{provider}"]["key"]
     key = await env.read( env_key ) 
