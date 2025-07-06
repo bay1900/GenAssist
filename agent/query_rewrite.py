@@ -25,6 +25,7 @@ async def query_rewriter( payload_input, provider="openai"):
         llm = await get_chat_model( provider)
         llm = llm["data"]
         
+        # TODO get promt from model config or consider if from promt folder so choose one
         prompt = PromptTemplate.from_template("Rewrite the following query to be more specific:\n{patient_question}")
         chain  = prompt | llm
         

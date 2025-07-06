@@ -4,8 +4,9 @@ from fastapi import FastAPI, Depends, HTTPException, status, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import APIKeyHeader
 
+from llm import embedding
 from model import param
-from src.utils import yaml, env, embedding, vector
+from src.utils import yaml, env, vector
 from agent import query_rewrite
 from dotenv import load_dotenv
 from retriever import knowledge_base
