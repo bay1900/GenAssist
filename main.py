@@ -86,7 +86,7 @@ async def retrive( payload: param.Embed_knowledgebase_input):
     embedding_class = embedding_class["data"] #overwrite embedding_class with the actual class
     
     status = await knowledge_base(is_embedding, embedding_provider, embedding_model, embedding_class )
-    return status   
+    return "status"   
 
 @app.post("/chat", dependencies=[Depends(validate_api_key)])
 async def chat_gen( payload: param.Chat_input):

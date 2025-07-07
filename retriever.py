@@ -32,7 +32,7 @@ async def knowledge_base( is_embedding, embedding_provider, embedding_model, emb
     text = actionplan_text["data"]
     chunks = await chunker.chunk_actionplan ( text )
     if not chunks["status"]: return chunks
-    
+     
     # WRITE JSON FILE
     # if json file exists, it will skip creating a new one
     actionpan_json_path = actionplan_config["actionplan_json_path"]
@@ -64,7 +64,6 @@ async def knowledge_base( is_embedding, embedding_provider, embedding_model, emb
     # Load the documents from the JSON file
     # This will return a list of Document objects with the specified content and metadata.
     documents = loader.load() 
-
     embeddings = embedding_class
     
     # VECTOR

@@ -626,3 +626,63 @@ INFO - 2025-07-06 22:18:47 - src.utils.yaml - [Request-ID: 5e735174-45d3-4669-98
 INFO - 2025-07-06 22:18:47 - src.utils.yaml - [Request-ID: 8440b1dc-18f9-43f4-9fc3-7d76e72b3322] - File read successfully: ./config/model_config.yaml
 INFO - 2025-07-06 22:18:47 - src.utils.yaml - [Request-ID: 8440b1dc-18f9-43f4-9fc3-7d76e72b3322] - File read successfully: ./config/model_config.yaml
 ERROR - 2025-07-06 22:18:49 - src.utils.helper - [Request-ID: 8440b1dc-18f9-43f4-9fc3-7d76e72b3322] - Expecting value: line 142 column 21 (char 5761)
+INFO - 2025-07-07 20:43:23 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:43:36 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:44:28 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:44:29 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:44:30 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:44:30 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:44:30 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:44:52 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:45:18 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:45:39 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:45:41 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:45:48 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:46:01 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:46:01 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:46:14 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:46:14 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:46:56 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:46:56 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:48:00 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:48:00 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:48:31 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:48:31 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:48:52 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:48:52 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:49:19 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:49:19 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:49:32 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-07 20:49:32 - src.llm.embedding - [Request-ID: -] - Unsupport Embedding Model ``text-embedding-3-small`` - Provider ``openai``
+INFO - 2025-07-07 20:50:57 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:51:23 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:53:49 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-07 20:53:49 - src.llm.embedding - [Request-ID: -] - Unsupport Embedding Model ``text-embedding-3-small`` - Provider ``openai``
+INFO - 2025-07-07 20:55:06 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-07 20:55:06 - src.llm.embedding - [Request-ID: -] - Unsupport Embedding Model ``text-embedding-3-small`` - Provider ``openai``
+INFO - 2025-07-07 20:55:24 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:55:38 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:55:38 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:55:57 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:55:57 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:56:44 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:56:44 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:56:59 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:56:59 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:57:38 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:57:38 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:58:08 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:58:08 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:58:08 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-07 20:58:08 - src.utils.file - [Request-ID: -] - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING - 2025-07-07 20:58:08 - src.utils.file - [Request-ID: -] - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO - 2025-07-07 20:58:15 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:58:15 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:58:15 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-07 20:58:15 - src.utils.file - [Request-ID: -] - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING - 2025-07-07 20:58:15 - src.utils.file - [Request-ID: -] - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO - 2025-07-07 20:58:41 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:58:41 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-07 20:58:41 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-07 20:58:41 - src.utils.file - [Request-ID: -] - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING - 2025-07-07 20:58:42 - src.utils.file - [Request-ID: -] - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.

@@ -35,8 +35,19 @@ async def embed_class( embedding_provider, embedding_model ):
     
     # CHECK IF PROVIDER SUPPORT
     path = await env.read( "MODEL_CONFIG")
+    if not path["status"]:
+        payload["msg"] = path["status"]
+        logger.warning( path["status"] )
+    path = path["data"]
+    
     data = await yaml.read( path )
-    embedding_model_list = data["data"]["embedding_model_list"][f"{embedding_provider}"]
+    if not data["status"]:
+        payload["msg"] = data["status"]
+        logger.warning( data["status"] )
+    data = data["data"]
+    
+    embedding_model_list = data["embedding_model_list"][f"{embedding_provider}"]
+    # print ( "embedding_model_list : ", embedding_model_list )
     
     # CHECK IF MODEL OF PROVIDER SUPPORT
     if embedding_model not in embedding_model_list:
@@ -45,7 +56,11 @@ async def embed_class( embedding_provider, embedding_model ):
         return payload
     
     KEY = await helper.get_key( embedding_provider )
-    print ( f"Key: {KEY}" )
+    if not KEY["status"]:
+        payload["msg"] = KEY["status"]
+        logger.warning( KEY["status"] )
+    KEY = KEY["data"]
+    
     # GET EMBEDDING CLASS
     embedding_class = classmethod
     if embedding_provider == "openai":
@@ -57,7 +72,7 @@ async def embed_class( embedding_provider, embedding_model ):
     payload["data"] = embedding_class
     
     return payload
-    
+     
 def embed( llm ):  
      
     payload = {  
