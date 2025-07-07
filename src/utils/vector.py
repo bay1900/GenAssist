@@ -72,7 +72,7 @@ async def get_or_create_vector( collection_name: str,
     
     
     return payload
-
+    
 
 async def get_collection( persist_directory: str):
         payload = {
@@ -111,9 +111,18 @@ async def chroma_controller( func_code ):
     # GET COLLECTIONS
     if func_code == "01": 
         path = await env.read( "FILE_PATH_CONFIG")
+        if not path["status"]:
+            payload["msg"] = path["msg"]
+            logger.warning(path["msg"] )
+        path = path["data"]
+
         data = await yaml.read( path)
-        
-        persist_directory = data["data"]["actionplan"]["actionplan_vector_path"]
+        if not data["status"]:
+            payload["msg"] = data["msg"]
+            logger.warning(data["msg"] )
+        data = data["data"]
+        # print( data )
+        persist_directory = data["actionplan"]["actionplan_vector_path"]
         collections = await vector.get_collection( persist_directory )
         collections = collections["data"]
 
