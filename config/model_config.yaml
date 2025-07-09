@@ -105,11 +105,17 @@ dense_retriver_config:
     model_embedding: "text-embedding-3-small"
     collection: "openai_text-embedding-3-small_collection"
 
-hyde_model:
+spare_retriver_config: 
+  k: 3
+
+hydbrid_retrieve:
   openai:
     model: "gpt-4.1-mini"
     temperature: 0.7
     max_tokens: 150
+    weights:
+      dense: 0.6
+      spare: 0.4
     prompt: |
       You are an expert content rewriter.
       Your task is to take the provided text and rewrite it to be:

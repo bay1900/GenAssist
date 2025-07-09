@@ -875,3 +875,26 @@ INFO - 2025-07-08 23:55:26 - agent.retriever - [Request-ID: -] - Collection expe
 INFO - 2025-07-08 23:55:53 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
 INFO - 2025-07-08 23:55:53 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
 INFO - 2025-07-08 23:55:53 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-09 23:08:49 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-09 23:09:19 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-09 23:13:01 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-09 23:13:28 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-09 23:13:28 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-09 23:13:28 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-09 23:13:28 - src.utils.file - [Request-ID: -] - File read successfully: ./data/actionplan/actionplan - whole.txt
+WARNING - 2025-07-09 23:13:28 - src.utils.file - [Request-ID: -] - File already exists and is not empty: ./data/actionplan/actionplan.json. Skipping write operation.
+INFO - 2025-07-09 23:13:33 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-09 23:13:35 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-09 23:13:36 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-09 23:13:36 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-09 23:13:46 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-09 23:13:48 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-09 23:14:37 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-09 23:14:49 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-09 23:14:49 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-09 23:14:50 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-09 23:14:50 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-09 23:14:58 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-09 23:14:58 - src.utils.yaml - [Request-ID: -] - File read successfully: ./config/file_path_config.yaml
+ERROR - 2025-07-09 23:18:21 - agent.retriever - [Request-ID: -] - [Errno 2] No such file or directory: './config/model_confi.yaml'
+ERROR - 2025-07-09 23:18:36 - agent.retriever - [Request-ID: -] - [Errno 2] No such file or directory: './config/model_confi.yaml'

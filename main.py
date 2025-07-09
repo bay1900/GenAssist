@@ -92,5 +92,6 @@ async def retrive( payload: param.Embed_knowledgebase_input):
 async def chat_gen( payload: param.Chat_input):
     
     # rewritten = await query_rewrite.query_rewriter(payload, provider = "openai" )
-    dense_result = await retriever.dense_retrieve ( payload, "what is BRCA1?",  )
-    return dense_result
+    # dense_result = await retriever.dense_retrieve (  "what is BRCA1?", payload )
+    spare_result = await retriever.spare_retrieve ( payload )
+    return spare_result
