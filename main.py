@@ -7,7 +7,7 @@ from fastapi.security import APIKeyHeader
 from src.llm import embedding
 from model import param
 from src.utils import yaml, env, vector
-from agent import query_rewrite
+from agent import query_rewrite, retriever
 from dotenv import load_dotenv
 from retriever import knowledge_base
 
@@ -86,11 +86,11 @@ async def retrive( payload: param.Embed_knowledgebase_input):
     embedding_class = embedding_class["data"] #overwrite embedding_class with the actual class
     
     status = await knowledge_base(is_embedding, embedding_provider, embedding_model, embedding_class )
-    return "status"   
+    return status   
 
 @app.post("/chat", dependencies=[Depends(validate_api_key)])
 async def chat_gen( payload: param.Chat_input):
     
-    rewritten = await query_rewrite.query_rewriter(payload, provider = "openai" )
-    
-    return rewritten
+    # rewritten = await query_rewrite.query_rewriter(payload, provider = "openai" )
+    dense_result = await retriever.dense_retrieve ( payload, "what is BRCA1?",  )
+    return dense_result

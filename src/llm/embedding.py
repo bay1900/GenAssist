@@ -29,7 +29,7 @@ async def embed_class( embedding_provider, embedding_model ):
     # CHECK PROVIDER
     embedding_map = EMBED_MAPPING.get( embedding_provider )
     if embedding_map is None:
-        payload["error"] = f"Unsupport Embedding Provider {embedding_provider}"
+        payload["msg"] = f"Unsupport Embedding Provider {embedding_provider}"
         logger.error( f"Unsupport Embedding Provider ``{embedding_provider}``" )
         return payload
     
@@ -51,7 +51,7 @@ async def embed_class( embedding_provider, embedding_model ):
     
     # CHECK IF MODEL OF PROVIDER SUPPORT
     if embedding_model not in embedding_model_list:
-        payload["error"] = f"Unsupport Embedding Model {embedding_model} for Provider {embedding_provider}"
+        payload["msg"] = f"Unsupport Embedding Model {embedding_model} for Provider {embedding_provider}"
         logger.error( f"Unsupport Embedding Model ``{embedding_model}`` - Provider ``{embedding_provider}``" )
         return payload
     
@@ -92,7 +92,7 @@ def embed( llm ):
         llm_propery = property["data"][llm]
     except KeyError as e : 
         err = f"Unsupport Model {e}",
-        payload["error"] = err
+        payload["msg"] = err
         
         logger.error( err )
         return payload

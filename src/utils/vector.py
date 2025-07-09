@@ -63,13 +63,31 @@ async def get_or_create_vector( collection_name: str,
             payload["status"] = True
             # payload["data"] = vector_store # Store the vector_store object
             
-            
     except Exception as e:
         logger.error(f"Error in get_or_create_vector: {e}", exc_info=True) # exc_info for traceback
         payload["error"] = str(e)
         payload["msg"] = f"Failed to create/update vector store for collection '{collection_name}' due to an error."
     
     
+    
+    try:
+        
+        print ( "persist_directory : ", persist_directory)
+        print ( "collection_name : ", collection_name)
+        if payload["status"]:
+            # Re-initialize vector_store to ensure it's loaded from disk for verification
+            vector_store_verify = Chroma(
+                persist_directory=persist_directory,
+                embedding_function=embedding_model,
+                collection_name=collection_name
+            )
+            retrieved_docs = vector_store_verify.similarity_search("test document", k=1)
+            print("\nRetrieved documents (for verification):")
+            for doc in retrieved_docs:
+                print("** ", doc.page_content)
+    except Exception as e:
+        print(f"Error during verification: {e}")
+
     
     return payload
     

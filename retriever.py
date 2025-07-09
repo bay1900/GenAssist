@@ -69,7 +69,7 @@ async def knowledge_base( is_embedding, embedding_provider, embedding_model, emb
     # VECTOR
     actionplan_vector_path = actionplan_config["actionplan_vector_path"]
     vector_store = await vector.get_or_create_vector(
-            collection_name= f"{embedding_provider}_{embedding_model}_collection",
+            collection_name= f"{embedding_provider}-{embedding_model}-collection",
             embedding_model=embeddings,
             persist_directory=actionplan_vector_path,
             documents=documents
