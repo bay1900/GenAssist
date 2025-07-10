@@ -120,6 +120,8 @@ rewritter_config:
       Rewritten text:
 
 dense_retriver_config: 
+  search_type: "similarity"
+  k: 5
   openai:
     model_embedding: "text-embedding-3-small"
     collection: "openai_text-embedding-3-small_collection"

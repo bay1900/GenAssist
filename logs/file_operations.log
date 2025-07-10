@@ -1447,3 +1447,247 @@ INFO - 2025-07-10 23:01:38 - src.utils.yaml - [Request-ID: fa80c3e9-9b6c-480c-b8
 INFO - 2025-07-10 23:01:38 - src.utils.yaml - [Request-ID: fa80c3e9-9b6c-480c-b8c2-cc4d51df308f] - File read successfully: ./config/model_config.yaml
 INFO - 2025-07-10 23:01:38 - src.utils.yaml - [Request-ID: fa80c3e9-9b6c-480c-b8c2-cc4d51df308f] - File read successfully: ./config/model_config.yaml
 INFO - 2025-07-10 23:01:38 - src.utils.yaml - [Request-ID: fa80c3e9-9b6c-480c-b8c2-cc4d51df308f] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:11:24 - src.utils.yaml - [Request-ID: 81e3775b-ccee-4af4-9f79-ddf1d648109c] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:11:24 - src.utils.yaml - [Request-ID: 81e3775b-ccee-4af4-9f79-ddf1d648109c] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:11:26 - src.utils.yaml - [Request-ID: 554a8f62-a2ab-418e-b578-90fae484d534] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:11:26 - src.utils.yaml - [Request-ID: 554a8f62-a2ab-418e-b578-90fae484d534] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:11:27 - src.utils.yaml - [Request-ID: 554a8f62-a2ab-418e-b578-90fae484d534] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:11:27 - src.utils.yaml - [Request-ID: 554a8f62-a2ab-418e-b578-90fae484d534] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:11:27 - src.utils.yaml - [Request-ID: 554a8f62-a2ab-418e-b578-90fae484d534] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:11:27 - src.utils.yaml - [Request-ID: 554a8f62-a2ab-418e-b578-90fae484d534] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:11:27 - src.utils.yaml - [Request-ID: 554a8f62-a2ab-418e-b578-90fae484d534] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:11:28 - src.utils.yaml - [Request-ID: 554a8f62-a2ab-418e-b578-90fae484d534] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:22:33 - src.utils.yaml - [Request-ID: 369f2313-b311-4a7a-b493-af448df4a129] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:22:33 - src.utils.yaml - [Request-ID: 369f2313-b311-4a7a-b493-af448df4a129] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:22:34 - src.utils.yaml - [Request-ID: 0837a561-8603-49e9-a1e6-73996ce93321] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:22:34 - src.utils.yaml - [Request-ID: 0837a561-8603-49e9-a1e6-73996ce93321] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:22:36 - src.utils.yaml - [Request-ID: 0837a561-8603-49e9-a1e6-73996ce93321] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:22:36 - src.utils.yaml - [Request-ID: 0837a561-8603-49e9-a1e6-73996ce93321] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:22:36 - src.utils.yaml - [Request-ID: 0837a561-8603-49e9-a1e6-73996ce93321] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:23:06 - src.utils.yaml - [Request-ID: 59511d9d-7260-444c-8650-80b535bdaa8b] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:23:06 - src.utils.yaml - [Request-ID: 59511d9d-7260-444c-8650-80b535bdaa8b] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:23:09 - src.utils.yaml - [Request-ID: 7d1e6523-179c-442a-a8dc-2febbd254969] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:23:09 - src.utils.yaml - [Request-ID: 7d1e6523-179c-442a-a8dc-2febbd254969] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:23:10 - src.utils.yaml - [Request-ID: 7d1e6523-179c-442a-a8dc-2febbd254969] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:23:10 - src.utils.yaml - [Request-ID: 7d1e6523-179c-442a-a8dc-2febbd254969] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:23:10 - src.utils.yaml - [Request-ID: 7d1e6523-179c-442a-a8dc-2febbd254969] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:23:10 - agent.retriever - [Request-ID: 7d1e6523-179c-442a-a8dc-2febbd254969] - list indices must be integers or slices, not str
+INFO - 2025-07-10 23:23:10 - src.utils.yaml - [Request-ID: 7d1e6523-179c-442a-a8dc-2febbd254969] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:23:10 - agent.retriever - [Request-ID: 7d1e6523-179c-442a-a8dc-2febbd254969] - 1 validation error for EnsembleRetriever
+retrievers.0
+  Input should be an instance of Runnable [type=is_instance_of, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/is_instance_of
+INFO - 2025-07-10 23:25:09 - src.utils.yaml - [Request-ID: 3969a835-f771-49ae-92e8-99569a1f3d29] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:25:09 - src.utils.yaml - [Request-ID: 3969a835-f771-49ae-92e8-99569a1f3d29] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:25:10 - src.utils.yaml - [Request-ID: c219869f-2601-4ac0-845d-bfaca29dab44] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:25:10 - src.utils.yaml - [Request-ID: c219869f-2601-4ac0-845d-bfaca29dab44] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:25:11 - src.utils.yaml - [Request-ID: c219869f-2601-4ac0-845d-bfaca29dab44] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:25:11 - src.utils.yaml - [Request-ID: c219869f-2601-4ac0-845d-bfaca29dab44] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:25:11 - src.utils.yaml - [Request-ID: c219869f-2601-4ac0-845d-bfaca29dab44] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:25:11 - agent.retriever - [Request-ID: c219869f-2601-4ac0-845d-bfaca29dab44] - list indices must be integers or slices, not str
+INFO - 2025-07-10 23:25:31 - src.utils.yaml - [Request-ID: f03600da-069f-4f7a-b65a-5750b0583989] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:25:31 - src.utils.yaml - [Request-ID: f03600da-069f-4f7a-b65a-5750b0583989] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:25:34 - src.utils.yaml - [Request-ID: 30805c15-67dd-4735-9bec-a23a89aa6337] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:25:34 - src.utils.yaml - [Request-ID: 30805c15-67dd-4735-9bec-a23a89aa6337] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:25:35 - src.utils.yaml - [Request-ID: 30805c15-67dd-4735-9bec-a23a89aa6337] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:25:35 - src.utils.yaml - [Request-ID: 30805c15-67dd-4735-9bec-a23a89aa6337] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:25:36 - src.utils.yaml - [Request-ID: 30805c15-67dd-4735-9bec-a23a89aa6337] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:25:36 - agent.retriever - [Request-ID: 30805c15-67dd-4735-9bec-a23a89aa6337] - list indices must be integers or slices, not str
+INFO - 2025-07-10 23:25:36 - src.utils.yaml - [Request-ID: 30805c15-67dd-4735-9bec-a23a89aa6337] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:25:36 - agent.retriever - [Request-ID: 30805c15-67dd-4735-9bec-a23a89aa6337] - 1 validation error for EnsembleRetriever
+retrievers.0
+  Input should be an instance of Runnable [type=is_instance_of, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/is_instance_of
+INFO - 2025-07-10 23:26:56 - src.utils.yaml - [Request-ID: 15663c09-2dc8-4423-98b3-18fdd9f0e650] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:26:56 - src.utils.yaml - [Request-ID: 15663c09-2dc8-4423-98b3-18fdd9f0e650] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:26:57 - src.utils.yaml - [Request-ID: 9873cfaf-93ec-4a56-9299-2c24a92b6a5a] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:26:57 - src.utils.yaml - [Request-ID: 9873cfaf-93ec-4a56-9299-2c24a92b6a5a] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:26:58 - src.utils.yaml - [Request-ID: 9873cfaf-93ec-4a56-9299-2c24a92b6a5a] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:26:58 - src.utils.yaml - [Request-ID: 9873cfaf-93ec-4a56-9299-2c24a92b6a5a] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:26:58 - src.utils.yaml - [Request-ID: 9873cfaf-93ec-4a56-9299-2c24a92b6a5a] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:26:58 - agent.retriever - [Request-ID: 9873cfaf-93ec-4a56-9299-2c24a92b6a5a] - list indices must be integers or slices, not str
+INFO - 2025-07-10 23:26:58 - src.utils.yaml - [Request-ID: 9873cfaf-93ec-4a56-9299-2c24a92b6a5a] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:26:58 - agent.retriever - [Request-ID: 9873cfaf-93ec-4a56-9299-2c24a92b6a5a] - 1 validation error for EnsembleRetriever
+retrievers.0
+  Input should be an instance of Runnable [type=is_instance_of, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/is_instance_of
+INFO - 2025-07-10 23:27:05 - src.utils.yaml - [Request-ID: d02cff14-4d94-4eb4-8e9a-a0d0988598c7] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:27:05 - src.utils.yaml - [Request-ID: d02cff14-4d94-4eb4-8e9a-a0d0988598c7] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:27:06 - src.utils.yaml - [Request-ID: 1560b140-ddff-493b-9e11-91242638db24] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:27:06 - src.utils.yaml - [Request-ID: 1560b140-ddff-493b-9e11-91242638db24] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:27:06 - src.utils.yaml - [Request-ID: 1560b140-ddff-493b-9e11-91242638db24] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:27:06 - src.utils.yaml - [Request-ID: 1560b140-ddff-493b-9e11-91242638db24] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:27:06 - src.utils.yaml - [Request-ID: 1560b140-ddff-493b-9e11-91242638db24] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:27:06 - agent.retriever - [Request-ID: 1560b140-ddff-493b-9e11-91242638db24] - list indices must be integers or slices, not str
+INFO - 2025-07-10 23:27:06 - src.utils.yaml - [Request-ID: 1560b140-ddff-493b-9e11-91242638db24] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:27:06 - agent.retriever - [Request-ID: 1560b140-ddff-493b-9e11-91242638db24] - 1 validation error for EnsembleRetriever
+retrievers.0
+  Input should be an instance of Runnable [type=is_instance_of, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/is_instance_of
+INFO - 2025-07-10 23:28:48 - src.utils.yaml - [Request-ID: eb303055-1ead-4a27-b57a-5b4143fb9ebb] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:28:48 - src.utils.yaml - [Request-ID: eb303055-1ead-4a27-b57a-5b4143fb9ebb] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:28:49 - src.utils.yaml - [Request-ID: ddff38d5-542a-4a03-96c2-631c3b3620f2] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:28:49 - src.utils.yaml - [Request-ID: ddff38d5-542a-4a03-96c2-631c3b3620f2] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:28:51 - src.utils.yaml - [Request-ID: ddff38d5-542a-4a03-96c2-631c3b3620f2] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:28:51 - src.utils.yaml - [Request-ID: ddff38d5-542a-4a03-96c2-631c3b3620f2] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:28:51 - src.utils.yaml - [Request-ID: ddff38d5-542a-4a03-96c2-631c3b3620f2] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:28:51 - agent.retriever - [Request-ID: ddff38d5-542a-4a03-96c2-631c3b3620f2] - list indices must be integers or slices, not str
+INFO - 2025-07-10 23:28:51 - src.utils.yaml - [Request-ID: ddff38d5-542a-4a03-96c2-631c3b3620f2] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:28:51 - agent.retriever - [Request-ID: ddff38d5-542a-4a03-96c2-631c3b3620f2] - 1 validation error for EnsembleRetriever
+retrievers.0
+  Input should be an instance of Runnable [type=is_instance_of, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/is_instance_of
+INFO - 2025-07-10 23:29:01 - src.utils.yaml - [Request-ID: a85916c4-2657-4f36-bfb6-31b3c5cc83ac] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:01 - src.utils.yaml - [Request-ID: a85916c4-2657-4f36-bfb6-31b3c5cc83ac] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:01 - src.utils.yaml - [Request-ID: 3be9c16a-809e-44e5-9b40-f6eb2f5f5ff4] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:01 - src.utils.yaml - [Request-ID: 3be9c16a-809e-44e5-9b40-f6eb2f5f5ff4] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:03 - src.utils.yaml - [Request-ID: 3be9c16a-809e-44e5-9b40-f6eb2f5f5ff4] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:03 - src.utils.yaml - [Request-ID: 3be9c16a-809e-44e5-9b40-f6eb2f5f5ff4] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:29:03 - src.utils.yaml - [Request-ID: 3be9c16a-809e-44e5-9b40-f6eb2f5f5ff4] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:29:03 - agent.retriever - [Request-ID: 3be9c16a-809e-44e5-9b40-f6eb2f5f5ff4] - list indices must be integers or slices, not str
+INFO - 2025-07-10 23:29:03 - src.utils.yaml - [Request-ID: 3be9c16a-809e-44e5-9b40-f6eb2f5f5ff4] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:29:03 - agent.retriever - [Request-ID: 3be9c16a-809e-44e5-9b40-f6eb2f5f5ff4] - 1 validation error for EnsembleRetriever
+retrievers.0
+  Input should be an instance of Runnable [type=is_instance_of, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/is_instance_of
+INFO - 2025-07-10 23:29:14 - src.utils.yaml - [Request-ID: a093d96d-2d50-4452-b7da-aca77d15cdd7] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:14 - src.utils.yaml - [Request-ID: a093d96d-2d50-4452-b7da-aca77d15cdd7] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:15 - src.utils.yaml - [Request-ID: 33613092-8568-4ff1-bfa5-c14f13f12954] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:15 - src.utils.yaml - [Request-ID: 33613092-8568-4ff1-bfa5-c14f13f12954] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:16 - src.utils.yaml - [Request-ID: 33613092-8568-4ff1-bfa5-c14f13f12954] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:16 - src.utils.yaml - [Request-ID: 33613092-8568-4ff1-bfa5-c14f13f12954] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:29:16 - src.utils.yaml - [Request-ID: 33613092-8568-4ff1-bfa5-c14f13f12954] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:29:16 - agent.retriever - [Request-ID: 33613092-8568-4ff1-bfa5-c14f13f12954] - list indices must be integers or slices, not str
+INFO - 2025-07-10 23:29:31 - src.utils.yaml - [Request-ID: 6750ca6d-579f-407a-9ee2-e168928a6364] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:31 - src.utils.yaml - [Request-ID: 6750ca6d-579f-407a-9ee2-e168928a6364] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:32 - src.utils.yaml - [Request-ID: e9e27bef-a7bb-4212-af9e-842479116fb1] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:32 - src.utils.yaml - [Request-ID: e9e27bef-a7bb-4212-af9e-842479116fb1] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:33 - src.utils.yaml - [Request-ID: e9e27bef-a7bb-4212-af9e-842479116fb1] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:33 - src.utils.yaml - [Request-ID: e9e27bef-a7bb-4212-af9e-842479116fb1] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:29:46 - src.utils.yaml - [Request-ID: 9ac9a07b-2c19-4cf4-bed4-4ee041fa887e] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:46 - src.utils.yaml - [Request-ID: 9ac9a07b-2c19-4cf4-bed4-4ee041fa887e] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:46 - src.utils.yaml - [Request-ID: 8f8fb2cc-bb3b-4b77-a6e3-2b18093045e7] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:46 - src.utils.yaml - [Request-ID: 8f8fb2cc-bb3b-4b77-a6e3-2b18093045e7] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:47 - src.utils.yaml - [Request-ID: 8f8fb2cc-bb3b-4b77-a6e3-2b18093045e7] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:29:48 - src.utils.yaml - [Request-ID: 8f8fb2cc-bb3b-4b77-a6e3-2b18093045e7] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:29:48 - src.utils.yaml - [Request-ID: 8f8fb2cc-bb3b-4b77-a6e3-2b18093045e7] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:29:48 - agent.retriever - [Request-ID: 8f8fb2cc-bb3b-4b77-a6e3-2b18093045e7] - list indices must be integers or slices, not str
+INFO - 2025-07-10 23:30:50 - src.utils.yaml - [Request-ID: 3a7e93b7-35da-4010-a63f-64130c7c98e8] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:30:50 - src.utils.yaml - [Request-ID: 3a7e93b7-35da-4010-a63f-64130c7c98e8] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:30:51 - src.utils.yaml - [Request-ID: a6d95bf2-4bdc-4339-a9f0-f9607605ad8f] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:30:51 - src.utils.yaml - [Request-ID: a6d95bf2-4bdc-4339-a9f0-f9607605ad8f] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:30:52 - src.utils.yaml - [Request-ID: a6d95bf2-4bdc-4339-a9f0-f9607605ad8f] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:30:52 - src.utils.yaml - [Request-ID: a6d95bf2-4bdc-4339-a9f0-f9607605ad8f] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:30:52 - src.utils.yaml - [Request-ID: a6d95bf2-4bdc-4339-a9f0-f9607605ad8f] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:30:52 - agent.retriever - [Request-ID: a6d95bf2-4bdc-4339-a9f0-f9607605ad8f] - list indices must be integers or slices, not str
+INFO - 2025-07-10 23:31:46 - src.utils.yaml - [Request-ID: 57e25b77-8234-45c0-b242-2e3126311879] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:31:46 - src.utils.yaml - [Request-ID: 57e25b77-8234-45c0-b242-2e3126311879] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:31:46 - src.utils.yaml - [Request-ID: 9f7d2ec2-48b9-4674-8cce-1122a755ae6b] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:31:46 - src.utils.yaml - [Request-ID: 9f7d2ec2-48b9-4674-8cce-1122a755ae6b] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:31:48 - src.utils.yaml - [Request-ID: 9f7d2ec2-48b9-4674-8cce-1122a755ae6b] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:31:48 - src.utils.yaml - [Request-ID: 9f7d2ec2-48b9-4674-8cce-1122a755ae6b] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:31:48 - src.utils.yaml - [Request-ID: 9f7d2ec2-48b9-4674-8cce-1122a755ae6b] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:31:48 - agent.retriever - [Request-ID: 9f7d2ec2-48b9-4674-8cce-1122a755ae6b] - string indices must be integers, not 'str'
+INFO - 2025-07-10 23:32:26 - src.utils.yaml - [Request-ID: 32b43af6-74bf-4aff-9a8a-9cf96debe7ae] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:26 - src.utils.yaml - [Request-ID: 32b43af6-74bf-4aff-9a8a-9cf96debe7ae] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:27 - src.utils.yaml - [Request-ID: c2cc7341-4ae3-4675-982b-5fdcde65401b] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:27 - src.utils.yaml - [Request-ID: c2cc7341-4ae3-4675-982b-5fdcde65401b] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:28 - src.utils.yaml - [Request-ID: c2cc7341-4ae3-4675-982b-5fdcde65401b] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:28 - src.utils.yaml - [Request-ID: c2cc7341-4ae3-4675-982b-5fdcde65401b] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:32:28 - src.utils.yaml - [Request-ID: c2cc7341-4ae3-4675-982b-5fdcde65401b] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:43 - src.utils.yaml - [Request-ID: cb9ac115-dc14-4f73-a3b7-0d981e382303] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:43 - src.utils.yaml - [Request-ID: cb9ac115-dc14-4f73-a3b7-0d981e382303] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:44 - src.utils.yaml - [Request-ID: 731c1a8b-0c4f-4cec-9a98-1ca0256ec048] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:44 - src.utils.yaml - [Request-ID: 731c1a8b-0c4f-4cec-9a98-1ca0256ec048] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:44 - src.utils.yaml - [Request-ID: 731c1a8b-0c4f-4cec-9a98-1ca0256ec048] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:44 - src.utils.yaml - [Request-ID: 731c1a8b-0c4f-4cec-9a98-1ca0256ec048] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:32:44 - src.utils.yaml - [Request-ID: 731c1a8b-0c4f-4cec-9a98-1ca0256ec048] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:52 - src.utils.yaml - [Request-ID: 1b1b3583-4cee-4a36-93cb-3475141b5604] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:52 - src.utils.yaml - [Request-ID: 1b1b3583-4cee-4a36-93cb-3475141b5604] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:53 - src.utils.yaml - [Request-ID: e3d8b725-13d1-4937-85ce-b305a90a5aef] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:53 - src.utils.yaml - [Request-ID: e3d8b725-13d1-4937-85ce-b305a90a5aef] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:54 - src.utils.yaml - [Request-ID: e3d8b725-13d1-4937-85ce-b305a90a5aef] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:32:54 - src.utils.yaml - [Request-ID: e3d8b725-13d1-4937-85ce-b305a90a5aef] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:32:54 - src.utils.yaml - [Request-ID: e3d8b725-13d1-4937-85ce-b305a90a5aef] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:33:07 - src.utils.yaml - [Request-ID: 57185e32-23d3-4595-997b-bc29b72550c5] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:33:07 - src.utils.yaml - [Request-ID: 57185e32-23d3-4595-997b-bc29b72550c5] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:33:09 - src.utils.yaml - [Request-ID: a09eb9e7-73f5-4d88-85ce-4f8debfc165f] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:33:09 - src.utils.yaml - [Request-ID: a09eb9e7-73f5-4d88-85ce-4f8debfc165f] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:33:10 - src.utils.yaml - [Request-ID: a09eb9e7-73f5-4d88-85ce-4f8debfc165f] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:33:10 - src.utils.yaml - [Request-ID: a09eb9e7-73f5-4d88-85ce-4f8debfc165f] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:33:10 - src.utils.yaml - [Request-ID: a09eb9e7-73f5-4d88-85ce-4f8debfc165f] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:33:10 - agent.retriever - [Request-ID: a09eb9e7-73f5-4d88-85ce-4f8debfc165f] - string indices must be integers, not 'str'
+INFO - 2025-07-10 23:33:40 - src.utils.yaml - [Request-ID: b2748cb1-0e3f-4cdb-bc5d-6934a5c6f4fc] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:33:40 - src.utils.yaml - [Request-ID: b2748cb1-0e3f-4cdb-bc5d-6934a5c6f4fc] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:33:41 - src.utils.yaml - [Request-ID: 875f498d-24b2-47c1-8e9c-0bb575ac3c4c] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:33:41 - src.utils.yaml - [Request-ID: 875f498d-24b2-47c1-8e9c-0bb575ac3c4c] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:33:42 - src.utils.yaml - [Request-ID: 875f498d-24b2-47c1-8e9c-0bb575ac3c4c] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:33:42 - src.utils.yaml - [Request-ID: 875f498d-24b2-47c1-8e9c-0bb575ac3c4c] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:33:42 - src.utils.yaml - [Request-ID: 875f498d-24b2-47c1-8e9c-0bb575ac3c4c] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:33:42 - agent.retriever - [Request-ID: 875f498d-24b2-47c1-8e9c-0bb575ac3c4c] - string indices must be integers, not 'str'
+INFO - 2025-07-10 23:34:55 - src.utils.yaml - [Request-ID: 7146b257-7936-4adf-a1e9-2c8c87639599] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:34:55 - src.utils.yaml - [Request-ID: 7146b257-7936-4adf-a1e9-2c8c87639599] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:34:56 - src.utils.yaml - [Request-ID: 75f7a74b-d4ba-4869-be4f-aecf0b307127] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:34:56 - src.utils.yaml - [Request-ID: 75f7a74b-d4ba-4869-be4f-aecf0b307127] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:34:58 - src.utils.yaml - [Request-ID: 75f7a74b-d4ba-4869-be4f-aecf0b307127] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:34:58 - src.utils.yaml - [Request-ID: 75f7a74b-d4ba-4869-be4f-aecf0b307127] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:34:58 - src.utils.yaml - [Request-ID: 75f7a74b-d4ba-4869-be4f-aecf0b307127] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:35:19 - src.utils.yaml - [Request-ID: 58e0fe3e-e49a-4d2f-9328-d47d65f34644] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:35:19 - src.utils.yaml - [Request-ID: 58e0fe3e-e49a-4d2f-9328-d47d65f34644] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:35:20 - src.utils.yaml - [Request-ID: b0a247ef-8779-4110-a838-613279666e6e] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:35:20 - src.utils.yaml - [Request-ID: b0a247ef-8779-4110-a838-613279666e6e] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:35:22 - src.utils.yaml - [Request-ID: b0a247ef-8779-4110-a838-613279666e6e] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:35:22 - src.utils.yaml - [Request-ID: b0a247ef-8779-4110-a838-613279666e6e] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:35:22 - src.utils.yaml - [Request-ID: b0a247ef-8779-4110-a838-613279666e6e] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:35:22 - agent.retriever - [Request-ID: b0a247ef-8779-4110-a838-613279666e6e] - unhashable type: 'dict'
+INFO - 2025-07-10 23:35:39 - src.utils.yaml - [Request-ID: 27f13082-c9f3-4ca0-adf1-a0928e7b3ea7] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:35:39 - src.utils.yaml - [Request-ID: 27f13082-c9f3-4ca0-adf1-a0928e7b3ea7] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:35:40 - src.utils.yaml - [Request-ID: c838d396-018b-4f97-af45-0846d4df6c25] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:35:40 - src.utils.yaml - [Request-ID: c838d396-018b-4f97-af45-0846d4df6c25] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:35:40 - src.utils.yaml - [Request-ID: c838d396-018b-4f97-af45-0846d4df6c25] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:35:40 - src.utils.yaml - [Request-ID: c838d396-018b-4f97-af45-0846d4df6c25] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:35:40 - src.utils.yaml - [Request-ID: c838d396-018b-4f97-af45-0846d4df6c25] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:35:40 - agent.retriever - [Request-ID: c838d396-018b-4f97-af45-0846d4df6c25] - unhashable type: 'dict'
+INFO - 2025-07-10 23:36:25 - src.utils.yaml - [Request-ID: 50e89b9a-65b3-41a4-89ff-05c654fbe28f] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:36:25 - src.utils.yaml - [Request-ID: 50e89b9a-65b3-41a4-89ff-05c654fbe28f] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:36:26 - src.utils.yaml - [Request-ID: 82429b6b-5030-4849-bfd8-afcbd3fb85dc] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:36:26 - src.utils.yaml - [Request-ID: 82429b6b-5030-4849-bfd8-afcbd3fb85dc] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:36:27 - src.utils.yaml - [Request-ID: 82429b6b-5030-4849-bfd8-afcbd3fb85dc] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:36:27 - src.utils.yaml - [Request-ID: 82429b6b-5030-4849-bfd8-afcbd3fb85dc] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:36:27 - src.utils.yaml - [Request-ID: 82429b6b-5030-4849-bfd8-afcbd3fb85dc] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:36:40 - src.utils.yaml - [Request-ID: bc4d326c-be29-4232-ac6b-19336ee03e5d] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:36:40 - src.utils.yaml - [Request-ID: bc4d326c-be29-4232-ac6b-19336ee03e5d] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:36:41 - src.utils.yaml - [Request-ID: 30cb46f1-c625-4c9b-a7d9-e0de204dd1e6] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:36:41 - src.utils.yaml - [Request-ID: 30cb46f1-c625-4c9b-a7d9-e0de204dd1e6] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:36:43 - src.utils.yaml - [Request-ID: 30cb46f1-c625-4c9b-a7d9-e0de204dd1e6] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:36:43 - src.utils.yaml - [Request-ID: 30cb46f1-c625-4c9b-a7d9-e0de204dd1e6] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:36:43 - src.utils.yaml - [Request-ID: 30cb46f1-c625-4c9b-a7d9-e0de204dd1e6] - File read successfully: ./config/model_config.yaml
+ERROR - 2025-07-10 23:36:43 - agent.retriever - [Request-ID: 30cb46f1-c625-4c9b-a7d9-e0de204dd1e6] - unhashable type: 'dict'
+INFO - 2025-07-10 23:37:06 - src.utils.yaml - [Request-ID: 0b889dec-1c66-4705-81c3-212a5657be53] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:06 - src.utils.yaml - [Request-ID: 0b889dec-1c66-4705-81c3-212a5657be53] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:06 - src.utils.yaml - [Request-ID: 9cae402a-ed4a-4835-a5e8-f3a0aa5c419d] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:06 - src.utils.yaml - [Request-ID: 9cae402a-ed4a-4835-a5e8-f3a0aa5c419d] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:07 - src.utils.yaml - [Request-ID: 9cae402a-ed4a-4835-a5e8-f3a0aa5c419d] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:07 - src.utils.yaml - [Request-ID: 9cae402a-ed4a-4835-a5e8-f3a0aa5c419d] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:37:07 - src.utils.yaml - [Request-ID: 9cae402a-ed4a-4835-a5e8-f3a0aa5c419d] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:07 - src.utils.yaml - [Request-ID: 9cae402a-ed4a-4835-a5e8-f3a0aa5c419d] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:07 - src.utils.yaml - [Request-ID: 9cae402a-ed4a-4835-a5e8-f3a0aa5c419d] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:21 - src.utils.yaml - [Request-ID: b96fd0d9-19db-48aa-be4b-c6da3b385dfe] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:21 - src.utils.yaml - [Request-ID: b96fd0d9-19db-48aa-be4b-c6da3b385dfe] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:22 - src.utils.yaml - [Request-ID: f103d207-0d45-4eb4-91c4-10de9f5f2de2] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:22 - src.utils.yaml - [Request-ID: f103d207-0d45-4eb4-91c4-10de9f5f2de2] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:24 - src.utils.yaml - [Request-ID: f103d207-0d45-4eb4-91c4-10de9f5f2de2] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:24 - src.utils.yaml - [Request-ID: f103d207-0d45-4eb4-91c4-10de9f5f2de2] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:37:24 - src.utils.yaml - [Request-ID: f103d207-0d45-4eb4-91c4-10de9f5f2de2] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:24 - src.utils.yaml - [Request-ID: f103d207-0d45-4eb4-91c4-10de9f5f2de2] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:24 - src.utils.yaml - [Request-ID: f103d207-0d45-4eb4-91c4-10de9f5f2de2] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:43 - src.utils.yaml - [Request-ID: 6450f17e-3b3c-4dea-abd3-8addc48a5292] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:43 - src.utils.yaml - [Request-ID: 6450f17e-3b3c-4dea-abd3-8addc48a5292] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:44 - src.utils.yaml - [Request-ID: 61d79ad6-857d-4d68-8b51-0d2f2cf06166] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:44 - src.utils.yaml - [Request-ID: 61d79ad6-857d-4d68-8b51-0d2f2cf06166] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:45 - src.utils.yaml - [Request-ID: 61d79ad6-857d-4d68-8b51-0d2f2cf06166] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:45 - src.utils.yaml - [Request-ID: 61d79ad6-857d-4d68-8b51-0d2f2cf06166] - File read successfully: ./config/file_path_config.yaml
+INFO - 2025-07-10 23:37:45 - src.utils.yaml - [Request-ID: 61d79ad6-857d-4d68-8b51-0d2f2cf06166] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:45 - src.utils.yaml - [Request-ID: 61d79ad6-857d-4d68-8b51-0d2f2cf06166] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:45 - src.utils.yaml - [Request-ID: 61d79ad6-857d-4d68-8b51-0d2f2cf06166] - File read successfully: ./config/model_config.yaml
+INFO - 2025-07-10 23:37:45 - src.utils.yaml - [Request-ID: 61d79ad6-857d-4d68-8b51-0d2f2cf06166] - File read successfully: ./config/model_config.yaml

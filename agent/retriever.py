@@ -17,7 +17,7 @@ logger = setup_logger(__name__, log_file='logs/file_operations.log')
 
 async def dense_retrieve( payload_in ): 
     
-    provider =  payload_in.provider
+    provider_in =  payload_in.provider
     
     payload = {
         "status": False,
@@ -32,12 +32,16 @@ async def dense_retrieve( payload_in ):
             payload["msg"] = config["msg"]
             return payload
         
-        config = config["data"]["dense_retriver_config"][f"{provider}"]
-        model_embedding = config["model_embedding"]
-        collection = config["collection"]
+        config = config["data"]["dense_retriver_config"]
+        search_type = config["search_type"]
+        k = config["k"]
+        # # [f"{provider}"] 
+        provider = config[f"{provider_in}"]
+        model_embedding = provider["model_embedding"]
+        collection = provider["collection"]
     
         # GET EMEMBEDDING CLASS
-        embeddings = await embedding.embed_class( provider, model_embedding )
+        embeddings = await embedding.embed_class( provider_in, model_embedding )
         if not embeddings["status"]:
             payload["msg"] = str(embeddings["msg"])
             logger.warning( embeddings["msg"])
@@ -51,14 +55,14 @@ async def dense_retrieve( payload_in ):
             embedding_function=embeddings,
             collection_name=collection
         ) 
-        dense_retriever = vector_store.as_retriever( search_type="similarity",
-                                                    search_kwargs={'k': 5})
+        dense_retriever = vector_store.as_retriever( search_type=search_type,
+                                                     search_kwargs={'k': k} )
         
         payload["status"] = True
         payload["data"]   = dense_retriever
     except Exception as e:
         payload["msg"] = str(e)
-        logger.err( e )
+        logger.error( e )
 
     return payload
     
@@ -156,14 +160,14 @@ async def retreive_controller(payload_in):
         payload["msg"] = spare_retreiver["msg"]
         logger.warning ( spare_retreiver["msg"] )
         return payload
-    spare_result = spare_retreiver["data"].invoke( patient_question )
+    # spare_result = spare_retreiver["data"].invoke( patient_question )
     
     dense_retreiver = await retriever.dense_retrieve ( payload_in  )
     if not dense_retreiver: 
         payload["msg"] = dense_retreiver["msg"]
         logger.warning ( dense_retreiver["msg"] )
         return payload
-    dense_result = spare_retreiver["data"].invoke( patient_question )
+    # dense_result = spare_retreiver["data"].invoke( patient_question )
     
     hydbrid_retriever = await retriever.hydbrid_retrieve( dense_retreiver["data"],spare_retreiver["data"] )
     if not hydbrid_retriever: 
@@ -173,4 +177,4 @@ async def retreive_controller(payload_in):
     hydbrid_result = hydbrid_retriever["data"].invoke( patient_question )
     
     
-    return dense_result
+    return hydbrid_result
