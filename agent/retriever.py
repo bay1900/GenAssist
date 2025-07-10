@@ -2,14 +2,20 @@
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings
 from langchain.docstore.document import Document
-from langchain.retrievers import BM25Retriever, EnsembleRetriever
+# from langchain.retrievers import BM25Retriever, EnsembleRetriever
+from langchain.retrievers import EnsembleRetriever
+from langchain_community.retrievers import BM25Retriever
+
+from agent import query_rewrite, query_hyde, retriever
+
+
 from src.llm import embedding
 from src.utils import yaml, doc_loader
 
 from src.utils.logger import setup_logger
 logger = setup_logger(__name__, log_file='logs/file_operations.log')  
 
-async def dense_retrieve( query, payload_in ): 
+async def dense_retrieve( payload_in ): 
     
     provider =  payload_in.provider
     
@@ -40,21 +46,23 @@ async def dense_retrieve( query, payload_in ):
 
         # VECTOR
         persist_directory = "./data/vector"
-        vector_store_verify = Chroma(
+        vector_store = Chroma(
             persist_directory=persist_directory,
             embedding_function=embeddings,
             collection_name=collection
         ) 
-        retrieved_docs = vector_store_verify.similarity_search(query, k=2)
+        dense_retriever = vector_store.as_retriever( search_type="similarity",
+                                                    search_kwargs={'k': 5})
+        
         payload["status"] = True
-        payload["data"]   = retrieved_docs
+        payload["data"]   = dense_retriever
     except Exception as e:
         payload["msg"] = str(e)
         logger.err( e )
 
     return payload
     
-async def spare_retrieve( payload_in ): 
+async def spare_retrieve( payload_in, document ): 
     
     #USER INPUT
     query = payload_in.patient_question #patient
@@ -67,7 +75,7 @@ async def spare_retrieve( payload_in ):
     
     try:
         # CONFIG
-        config = await yaml.read( "./config/model_confi.yaml" )
+        config = await yaml.read( "./config/model_config.yaml" )
         if not config["status"]: 
             payload["msg"] = config["msg"]
             return payload
@@ -76,36 +84,93 @@ async def spare_retrieve( payload_in ):
         k_result = config["k"]
         
         # LOAD DOCUMENT
-        document = await doc_loader.actionplan_document()
-        
+        if len( document) == 0 :
+            document = await doc_loader.actionplan_document()
+            
         # RETRIEVER
         spare_retriever   = BM25Retriever.from_documents ( document )
         spare_retriever.k = k_result
-        spare_result = spare_retriever.get_relevant_documents( query )
+        # spare_result = spare_retriever.invoke( query )
         
         payload["status"] = True
-        payload["data"]   = spare_result
+        payload["data"]   = spare_retriever
     except Exception as e: 
         payload["msg"] = str(e)
         logger.error( e )
         
     return payload
     
-async def hydbrid_retrieve ( query, payload_in ): 
+async def hydbrid_retrieve( dense_retriever, spare_retriever ): 
+    payload = {
+        "status": False,
+        "data": "",
+        "msg": ""
+    }
     
-    # DENSE
-    dense_result = dense_retrieve (query, payload_in )
+    try:
+        # CONFIG
+        config = await yaml.read( "./config/model_config.yaml" )
+        if not config["status"]: 
+            payload["msg"] = config["msg"]
+            return payload
+            
+        config  = config["data"]["hydbrid_retriever_config"]
+        weights = config["weights"]
+        hydbrid_retriever = EnsembleRetriever( retrievers = [ dense_retriever, spare_retriever ],
+                                               weights    = [ weights["dense"], weights["spare"] ] )      
+        
+        payload["status"] = True
+        payload["data"]   = hydbrid_retriever
+    except Exception as e: 
+        payload["msg"] = str(e)
+        logger.error( e )
     
-    # SPARE
-    spare_result = spare_result   ( query, document )
-    hydbrid_retrieve = EnsembleRetriever ( 
-                                          retrievers= [ 
-                                                        lambda q: dense_result,
-                                                        lambda q: spare_result
-                                                      ],
-                                          weights=[0.6, 0.4] #
-                                         )
+    return payload
+
+async def retreive_controller(payload_in): 
     
-    hydbrid_result = hydbrid_retrieve.get_relevant_documents( query )
+    payload = {
+        "status": False,
+        "data": "",
+        "msg": ""
+    }
     
-    return hydbrid_result
+    patient_question = payload_in.patient_question
+    
+    rewritten = await query_rewrite.query_rewriter(payload_in, provider = "openai" )
+    if not rewritten: 
+        payload["msg"] = rewritten["msg"]
+        logger.warning ( rewritten["msg"] )
+        return payload
+    rewritten = rewritten["data"]["patient_question_rewritten"]
+    
+    hyde = await query_hyde.query_hyde( rewritten, provider = "openai" )
+    if not rewritten: 
+        payload["msg"] = hyde["msg"]
+        logger.warning ( hyde["msg"] )
+        return payload
+    hyde = hyde["data"]["patient_question_hyde"]
+    
+    spare_retreiver = await retriever.spare_retrieve ( payload_in, "" )
+    if not spare_retreiver: 
+        payload["msg"] = spare_retreiver["msg"]
+        logger.warning ( spare_retreiver["msg"] )
+        return payload
+    spare_result = spare_retreiver["data"].invoke( patient_question )
+    
+    dense_retreiver = await retriever.dense_retrieve ( payload_in  )
+    if not dense_retreiver: 
+        payload["msg"] = dense_retreiver["msg"]
+        logger.warning ( dense_retreiver["msg"] )
+        return payload
+    dense_result = spare_retreiver["data"].invoke( patient_question )
+    
+    hydbrid_retriever = await retriever.hydbrid_retrieve( dense_retreiver["data"],spare_retreiver["data"] )
+    if not hydbrid_retriever: 
+        payload["msg"] = hydbrid_retriever["msg"]
+        logger.warning ( hydbrid_retriever["msg"] )
+        return payload
+    hydbrid_result = hydbrid_retriever["data"].invoke( patient_question )
+    
+    
+    return dense_result

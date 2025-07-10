@@ -82,7 +82,26 @@ embedding_model_list:
     - claude-embedding-1
     - claude-embedding-2
 
-rewritter_model:
+HyDE_config:
+  provider: "openai"
+  openai:
+    model: "gpt-4.1-mini"
+    temperature: 0.7
+    max_tokens: 150
+    prompt: |
+      You are an expert content rewriter.
+      Your task is to take the provided text and rewrite it to be:
+      - More concise
+      - Clearer and easier to understand
+      - Free of jargon
+
+      Original text:
+      ---
+      {patient_question}
+      ---
+      Rewritten text:
+
+rewritter_config:
   openai:
     model: "gpt-4.1-mini"
     temperature: 0.7
@@ -108,23 +127,7 @@ dense_retriver_config:
 spare_retriver_config: 
   k: 3
 
-hydbrid_retrieve:
-  openai:
-    model: "gpt-4.1-mini"
-    temperature: 0.7
-    max_tokens: 150
-    weights:
-      dense: 0.6
-      spare: 0.4
-    prompt: |
-      You are an expert content rewriter.
-      Your task is to take the provided text and rewrite it to be:
-      - More concise
-      - Clearer and easier to understand
-      - Free of jargon
-
-      Original text:
-      ---
-      {patient_question}
-      ---
-      Rewritten text:
+hydbrid_retriever_config:
+  weights:
+    dense: 0.6
+    spare: 0.4

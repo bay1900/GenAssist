@@ -9,7 +9,7 @@ logger = setup_logger(__name__, log_file='logs/file_model.log')
 async def query_hyde( query, provider="openai"):
     
     # model_config.yaml
-    root_key = "hyde_model" 
+    root_key = "HyDE_config" 
     
     req_id = str(uuid.uuid4())
     request_id_var.set(req_id)
@@ -30,14 +30,31 @@ async def query_hyde( query, provider="openai"):
         llm_prompt = llm["data"]["prompt"]
         prompt_tempalte = PromptTemplate.from_template(llm_prompt)
         chain   = prompt_tempalte | llm_model
-        result  = chain.invoke({ 
-                                # "output_language": "English",
+        hyde_result  = chain.invoke({ 
                                 "patient_question": f"{query}"
                               })
-
-         
+        patient_question_hyde = hyde_result.content
+        model_name = hyde_result.response_metadata["model_name"]
+        
+        usage = { 
+            "usage_metadata": { 
+                "input_tokens": hyde_result.usage_metadata["input_tokens"],
+                "output_tokens": hyde_result.usage_metadata["output_tokens"]
+            },
+            "token_usage": { 
+                "completion_tokens": hyde_result.response_metadata["token_usage"]["completion_tokens"],
+                "prompt_tokens": hyde_result.response_metadata["token_usage"]["prompt_tokens"]
+            }
+        }
+        
+        data = { 
+                "patient_question_hyde" : patient_question_hyde,
+                "usage" : usage,
+                "model_name": model_name
+                }
+        
         payload["status"] = True
-        payload["data"]   = result
+        payload["data"]   = data
         
 
     except Exception as e: 

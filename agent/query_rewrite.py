@@ -9,7 +9,7 @@ logger = setup_logger(__name__, log_file='logs/file_model.log')
 async def query_rewriter( payload_input, provider="openai"):
     
     # model_config.yaml
-    root_key = "rewritter_model" 
+    root_key = "rewritter_config" 
     
     req_id = str(uuid.uuid4())
     request_id_var.set(req_id)
@@ -34,28 +34,27 @@ async def query_rewriter( payload_input, provider="openai"):
         prompt_tempalte = PromptTemplate.from_template(llm_prompt)
         chain  = prompt_tempalte | llm_model
         rewrite_result  = chain.invoke({ 
-                                # "output_language": "English",
                                 "patient_question": f"{patient_question}"
                               })
         patient_question_rewritten = rewrite_result.content
-        patient_question_rewritten_usage = rewrite_result.usage_metadata
-        
-        patient_question_hyde = await query_hyde.query_hyde( patient_question_rewritten, provider = "openai" )
-        if not patient_question_hyde["status"]:
-            logger.warning( patient_question_hyde["msg"] )
-        patient_question_hyde_content = patient_question_hyde['data'].content
-        patient_question_hyde_usage   = patient_question_hyde['data'].usage_metadata
+        model_name = rewrite_result.response_metadata["model_name"]
         
         usage = { 
-                 "rewritten": patient_question_rewritten_usage,
-                 "hyde": patient_question_hyde_usage
-                }
+            "usage_metadata": { 
+                "input_tokens": rewrite_result.usage_metadata["input_tokens"],
+                "output_tokens": rewrite_result.usage_metadata["output_tokens"]
+            },
+            "token_usage": { 
+                "completion_tokens": rewrite_result.response_metadata["token_usage"]["completion_tokens"],
+                "prompt_tokens": rewrite_result.response_metadata["token_usage"]["prompt_tokens"]
+            }
+        }
         
         data = { 
                 "patient_question": f"{patient_question}",
                 "patient_question_rewritten" : patient_question_rewritten,
-                "patient_question_hyde" : patient_question_hyde_content,
-                "usage" : usage
+                "usage" : usage,
+                "model_name": model_name
                 }
          
         payload["status"] = True

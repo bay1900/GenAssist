@@ -91,7 +91,12 @@ async def retrive( payload: param.Embed_knowledgebase_input):
 @app.post("/chat", dependencies=[Depends(validate_api_key)])
 async def chat_gen( payload: param.Chat_input):
     
-    # rewritten = await query_rewrite.query_rewriter(payload, provider = "openai" )
-    # dense_result = await retriever.dense_retrieve (  "what is BRCA1?", payload )
-    spare_result = await retriever.spare_retrieve ( payload )
-    return spare_result
+    # # rewritten = await query_rewrite.query_rewriter(payload, provider = "openai" )
+    # # dense_result = await retriever.dense_retrieve (  "what is BRCA1?", payload )
+    # spare_result = await retriever.spare_retrieve ( payload, "" )
+    # spare_retreiver = spare_result["data"]
+    # rs = spare_retreiver.invoke( "testtest")
+    # # hydbrid_result = await retriever.hydbrid_retrieve( "what is BRCA1?" , payload)
+    
+    result = await retriever.retreive_controller( payload )
+    return result 
