@@ -82,6 +82,7 @@ embedding_model_list:
     - claude-embedding-1
     - claude-embedding-2
 
+##### RETRIEVER CONFIG #####
 HyDE_config:
   provider: "openai"
   openai:
@@ -133,3 +134,7 @@ hydbrid_retriever_config:
   weights:
     dense: 0.6
     spare: 0.4
+
+##### RETRIEVER CONTROLLER CONFIG #####
+retriever_contrllor_config:
+  retrieve_type: "hyde"

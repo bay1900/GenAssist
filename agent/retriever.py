@@ -139,42 +139,80 @@ async def retreive_controller(payload_in):
         "msg": ""
     }
     
+    data = { 
+        "retrieve_result": "",
+        "retrieve_type": "",
+    }
+    
+    # INPUT
     patient_question = payload_in.patient_question
     
+    # CONFIG
+    root_key = "retriever_contrllor_config"
+    config = await yaml.read( "./config/model_config.yaml" )
+    if not config["status"]: 
+        payload["msg"] = config["msg"]
+        logger.warning( config["msg"] )
+        return payload 
+    config = config["data"][root_key]
+    retrieve_type = config["retrieve_type"]
+    
+    # REWRITEN
     rewritten = await query_rewrite.query_rewriter(payload_in, provider = "openai" )
     if not rewritten: 
         payload["msg"] = rewritten["msg"]
         logger.warning ( rewritten["msg"] )
         return payload
     rewritten = rewritten["data"]["patient_question_rewritten"]
+    if retrieve_type == "rewritten":
+        payload["status"] = True
+        data["retrieve_result"] = rewritten
     
+    # HyDE
     hyde = await query_hyde.query_hyde( rewritten, provider = "openai" )
-    if not rewritten: 
+    if not hyde: 
         payload["msg"] = hyde["msg"]
         logger.warning ( hyde["msg"] )
         return payload
     hyde = hyde["data"]["patient_question_hyde"]
+    if retrieve_type == "hyde": 
+        payload["status"] = True
+        data["retrieve_result"] = hyde
     
+    # SPARE
     spare_retreiver = await retriever.spare_retrieve ( payload_in, "" )
     if not spare_retreiver: 
         payload["msg"] = spare_retreiver["msg"]
         logger.warning ( spare_retreiver["msg"] )
         return payload
-    # spare_result = spare_retreiver["data"].invoke( patient_question )
+    if retrieve_type == "spare": 
+        spare_result = spare_retreiver["data"].invoke( patient_question )
+        payload["status"] = True
+        data["retrieve_result"] = spare_result
     
+    # DENSE
     dense_retreiver = await retriever.dense_retrieve ( payload_in  )
     if not dense_retreiver: 
         payload["msg"] = dense_retreiver["msg"]
         logger.warning ( dense_retreiver["msg"] )
         return payload
-    # dense_result = spare_retreiver["data"].invoke( patient_question )
+    if retrieve_type == "dense": 
+        dense_result = spare_retreiver["data"].invoke( patient_question )
+        payload["status"] = True
+        data["retrieve_result"] = dense_result
     
+    # HYBRID
     hydbrid_retriever = await retriever.hydbrid_retrieve( dense_retreiver["data"],spare_retreiver["data"] )
     if not hydbrid_retriever: 
         payload["msg"] = hydbrid_retriever["msg"]
         logger.warning ( hydbrid_retriever["msg"] )
         return payload
-    hydbrid_result = hydbrid_retriever["data"].invoke( patient_question )
+    if retrieve_type == "hydbrid": 
+        hydbrid_result = hydbrid_retriever["data"].invoke( patient_question )
+        payload["status"] = True
+        data["retrieve_result"] = hydbrid_result
     
     
-    return hydbrid_result
+    data["retrieve_type"] = retrieve_type
+    payload["data"] = data
+    return payload
