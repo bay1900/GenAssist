@@ -60,14 +60,14 @@ async def get_chat_model( provider: str, root_key: str ):
         )
         
         # PROMPT
-        prompt = config["prompt"] 
+        prompt = config["prompt"]
         
         # TEMP DATA
         temp_data = { 
                      "model": chat_model,
                      "prompt": prompt or ""
                     }
-        
+         
         payload["status"] = True
         payload["data"]   = temp_data
     except KeyError as e: 

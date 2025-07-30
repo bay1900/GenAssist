@@ -7,7 +7,7 @@ from fastapi.security import APIKeyHeader
 from src.llm import embedding
 from model import param
 from src.utils import yaml, env, vector
-from agent import query_rewrite, retriever
+from agent import query_rewrite, retriever, executor
 from dotenv import load_dotenv
 from retriever import knowledge_base
 
@@ -98,5 +98,8 @@ async def chat_gen( payload: param.Chat_input):
     # rs = spare_retreiver.invoke( "testtest")
     # # hydbrid_result = await retriever.hydbrid_retrieve( "what is BRCA1?" , payload)
     
-    result = await retriever.retreive_controller( payload )
-    return result 
+    # result = await retriever.retreive_controller( payload )
+    
+    test = await executor.agent_executor()
+    
+    return test 
