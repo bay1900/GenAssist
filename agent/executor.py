@@ -39,8 +39,9 @@ async def agent_executor():
     config   = config["data"][root_key]
     provider = config["provider"]
     provider_property = config[provider]
-    prompt_str   = config["prompt"] # "MaterPrompt not ProviderPrompt"
-    tool_desc    = config["tool_desc"]
+    sys_prompt   = config["sys_prompt"] # "MaterPrompt not ProviderPrompt"
+    tool_desc_action_plan    = config["tool_desc_action_plan"]
+    vector_k     = config["vector_k"]
   
     # GET EMEMBEDDING CLASS
     model_embedding = provider_property["model_embedding"]
@@ -50,13 +51,14 @@ async def agent_executor():
         return payload
     embedding_func = embedding_func["data"]
     
+    # VECTOR STORE
     vectordb = Chroma( 
             persist_directory  = "../data/vector/6509ba0f-d540-4f55-b16c-2486b1266306",
             embedding_function = embedding_func
     )
     
     retriever = vectordb.as_retriever(search_type="similarity", 
-                                      search_kwargs={"k": 3})
+                                      search_kwargs={"k": vector_k })
     
     # CHAT MODEL
     chat_model = await get_chat_model( provider, root_key )
@@ -65,11 +67,12 @@ async def agent_executor():
         return payload
     chat_model = chat_model["data"]["model"]
     
+    # --------- MESSAGE ---------
     # SYSTEM
     system_prompt = SystemMessagePromptTemplate(
         prompt=PromptTemplate(
             input_variables=["context"],
-            template= prompt_str,
+            template= sys_prompt,
         )
     )
     # HUMAN
@@ -79,38 +82,41 @@ async def agent_executor():
             template="{question}",
         )
     )
-    
     # COMBINE MESSAGES
     messages = [system_prompt, human_prompt]
     
+    # --------- PROMPT ---------
     prompt_template = ChatPromptTemplate(
         input_variables=["context", "question", "chat_history"],
         messages=messages
     )
     
+    agent_prompt = hub.pull("hwchase17/react-chat") # LangSmithMissingAPIKeyWarning
+    
     vector_chain = (
             {
-                "context": retriever, 
-                "question":  RunnablePassthrough(),
-                "chat_history": RunnablePassthrough()
+              "context": retriever, 
+              "question":  RunnablePassthrough(),
+              "chat_history": RunnablePassthrough()
             } 
             | prompt_template
             | chat_model
             | StrOutputParser()
     )
-
-    tools = [
-        Tool(
+    
+    # --------- TOOL ---------
+    actionplan_tool = Tool(
             name  = "ActionPlan",
             func  = vector_chain.invoke,
-            description = tool_desc,
-        ),
-    ]
-    agent_prompt = hub.pull("hwchase17/react-chat") # LangSmithMissingAPIKeyWarning
+            description = tool_desc_action_plan,
+        )
+    tools = [ actionplan_tool ]
     
-    agent = create_react_agent( llm = chat_model, 
-                                tools = tools, 
-                                prompt = agent_prompt)
+    
+    # --------- EXECUTOR ---------
+    agent = create_react_agent( llm    = chat_model, 
+                                tools  = tools, 
+                                prompt = agent_prompt )
     
     agent_executor = AgentExecutor(
         agent = agent,
@@ -125,4 +131,4 @@ async def agent_executor():
                                     #  "intermediate_steps": []  
                                      })
 
-    return embedding_func
+    return result
